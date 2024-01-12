@@ -1,0 +1,194 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    {{! <link rel="stylesheet" href="css/footer.css" /> }}
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/trang_chu/body.css" />
+
+    <script src="js/set_search_bar.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/footer.css" />
+    <script
+      src="https://kit.fontawesome.com/0afaeea3b6.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- KHỞI TẠO HEADER -->
+    <div class="header grid">
+      <!-- KHUNG HEADER -->
+      <div class="header__grid">
+        <!-- PHẦN CHÍNH CỦA HEADER -->
+        <div class="header-title">
+          <!-- BÊN TRÁI HEADER -->
+          <div class="header-title--left header-title--elements">
+            <div class="header-title--left-icon">
+              <div class="header-title--left-icon--block">
+                <img src="img/school_icon.png" alt="school" />
+              </div>
+            </div>
+            <div class="header-title--left-sub">
+              <div class="header-title--left-sub--block">
+                <p>HVN-EDUCATION</p>
+                <i class="fa-solid fa-school"></i>
+              </div>
+            </div>
+          </div>
+          <!-- GIỮA HEADER -->
+          <div class="header-title--center header-title--elements">
+            <div class="header-title--center-title">
+              <div class="header-title--center-title--block">
+                <p><i
+                    class="fa-solid fa-book"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                  HUYNH VAN NGHE HIGH SCHOOL</p>
+              </div>
+            </div>
+          </div>
+          <!-- PHẢI HEADER -->
+          <div class="header-title--right header-title--elements">
+            <!-- CÁC NÚT -->
+            <div class="header-title--right-buttons">
+              <!-- NÚT LIÊN KẾT FACEBOOK VÀ QRCODE -->
+              <div
+                class="header-title--right-buttons-menu header-title--right-buttons--elements"
+              >
+                <a
+                  class="header-title--right-buttons-menu--icon fa-brands fa-facebook"
+                ><p class="h-m-p">facebook</p></a>
+                <div class="header-title--right-buttons-menu--show">
+                  <ul>
+                    <a
+                      class="header-title--right-buttons-menu--show-elements"
+                      title="Link to Facebook HVN"
+                      href="https://www.facebook.com/profile.php?id=100028020954560&mibextid=ZbWKwL"
+                      target="_blank"
+                    >
+                      <img
+                        class="header-title--right-buttons-menu--show-elements--qrc"
+                        alt="QR Code"
+                        src="img/QRCode.png"
+                      />
+                      <i
+                        class="header-title--right-buttons-menu--show-elements--fbi fa-brands fa-facebook fa-fade"
+                      > Facebook</i>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+              <!-- NÚT LOGIN VÀ SIGNUP -->
+              <div class="login-signup header-title--right-buttons--elements">
+                <a class="login button">LOGIN</a>
+                <a class="signup button">SIGN UP</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-nav">
+          <!-- THANH SIDEBAR ẨN -->
+          <div class="header-nav__sidebar-button" id="main-sidebar--block">
+            <button
+              class="fa-solid fa-caret-down"
+              id="main-sidebar--button"
+              onclick="set_side_bar()"
+            ></button>
+            <div id="main-sidebar--hideblock">
+              <iframe src="html/sidebar.html"></iframe>
+            </div>
+          </div>
+          <!-- NÚT TÌM KIẾM -->
+          <div class="header-nav__search-block" id="search--block">
+            <div class="header-nav__search-block__button" id="search--button">
+              <button
+                class="fa-solid fa-magnifying-glass header-nav__search-block__button--icon"
+                onclick="set_search_bar()"
+              ></button>
+            </div>
+            <div class="header-nav__search-block__bar" id="search--bar">
+              <input type="text" />
+            </div>
+          </div>
+          <!-- THANH ĐIỀU HƯỚNG -->
+          <div class="header-nav__menu">
+            <a href="trangchu" class="header-nav__menu--element navbutton">TRANG
+              CHỦ</a>
+            <a
+              href="thong_tin_hs"
+              class="header-nav__menu--element navbutton"
+            >HỌC SINH</a>
+            <a
+              href="thong_tin_lop"
+              class="header-nav__menu--element navbutton"
+            >LỚP</a>
+            <a
+              href="thong_tin_clb"
+              class="header-nav__menu--element navbutton"
+            >NHÓM</a>
+            <a href="thu_vien" class="header-nav__menu--element navbutton">THƯ
+              VIỆN</a>
+            <a href="hoat_dong" class="header-nav__menu--element navbutton">HOẠT
+              ĐỘNG</a>
+            <a
+              href="gioi_thieu"
+              class="header-nav__menu--element navbutton"
+            >GIỚI THIỆU TRƯỜNG</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- KHỞI TẠO KHUNG THÂN -->
+    <div class="under-header">
+      {{{body}}}
+    </div>
+    <div class="myfooter">
+      <div class="cr_body">
+        <script></script>
+        <div id="left">
+          <div class="content" id="left-content">
+            <p id="d1">
+              Trang web này được tạo ra nhằm mục đích phục vụ nghiên cứu, sử
+              dụng và học tập, không phục vụ các mục đích thương mại khác. Đây
+              là một trang web chưa hoàn thiện, chúc mọi người có những giây
+              phút tận hưởng thật tốt và nếu có gì không tốt hãy để lại
+              <strong>feedback</strong>.
+            </p>
+          </div>
+        </div>
+        <div id="right">
+          <div class="content">
+            <div id="function" id="right-content">
+              <a href="" class="right-content--link" id="facebook"><i
+                  class="fa-brands fa-facebook"
+                ></i></a>
+              <a href="" class="right-content--link" id="instagram"><i
+                  class="fa-brands fa-instagram"
+                ></i></a>
+              <a href="" class="right-content--link" id="gmail"><i
+                  class="fa-solid fa-envelope"
+                ></i></a>
+              <a href="" class="right-content--link" id="feedback"><strong
+                >Feedback</strong></a>
+            </div>
+            <div id="copyright">
+              <p id="copyright" style="color: white">
+                <i class="fa-regular fa-copyright"></i>
+                NoCopyright
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
