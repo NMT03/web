@@ -4,6 +4,7 @@ const hsrouter = require("./hs");
 const loprouter = require("./lop");
 const nhomrouter = require("./nhom");
 const thuvienrouter = require("./thuvien");
+const DBrouter = require("./DB");
 
 function route(app) {
   app.use("/trangchu", trangchurouter);
@@ -15,6 +16,8 @@ function route(app) {
   app.use("/thong_tin_clb", nhomrouter);
 
   app.use("/thu_vien", thuvienrouter);
+
+  app.use("/DB", DBrouter);
 
   app.use("/", homerouter);
 }
