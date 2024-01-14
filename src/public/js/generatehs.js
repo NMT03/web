@@ -1,4 +1,4 @@
-var ho = ["Nguyễn ", "Trần ", "Mai ", "Lê ", "Tào ", "Đặng ", "Huỳnh "];
+var ho = ["Nguyễn ", "Trần ", "Mai ", "Lê ", "Tào ", "Đặng ", "Huỳnh"];
 var dem = ["Thị ", "Minh ", "Thanh ", "Thế ", "Ngọc "];
 var ten = ["Hào", "Nhi", "Ngọc", "Khang", "Hạnh", "Hằng"];
 for (let i = 1; i <= 30; i++) {

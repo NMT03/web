@@ -6,21 +6,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
-    {{! <link rel="stylesheet" href="css/footer.css" /> }}
-
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/trang_chu/body.css" />
+    <link rel="stylesheet" href="css/thu_vien/body.css" />
+    <link rel="stylesheet" href="css/thong_tin_clb/body.css" />
+    <link rel="stylesheet" href="css/thong_tin_lop/body.css" />
+    <link rel="stylesheet" href="css/thong_tin_hs/body.css" />
+    <link rel="stylesheet" href="css/gioi_thieu/body.css" />
 
     <script src="js/set_search_bar.js"></script>
     <script src="js/main.js"></script>
-    <link rel="stylesheet" href="css/footer.css" />
     <script
       src="https://kit.fontawesome.com/0afaeea3b6.js"
       crossorigin="anonymous"
     ></script>
-
-    <title>Document</title>
   </head>
   <body>
     <!-- KHỞI TẠO HEADER -->
@@ -120,8 +120,10 @@
           </div>
           <!-- THANH ĐIỀU HƯỚNG -->
           <div class="header-nav__menu">
-            <a href="trangchu" class="header-nav__menu--element navbutton">TRANG
-              CHỦ</a>
+            <a
+              href="trang_chu"
+              class="header-nav__menu--element navbutton"
+            >TRANG CHỦ</a>
             <a
               href="thong_tin_hs"
               class="header-nav__menu--element navbutton"
@@ -136,8 +138,8 @@
             >NHÓM</a>
             <a href="thu_vien" class="header-nav__menu--element navbutton">THƯ
               VIỆN</a>
-            <a href="hoat_dong" class="header-nav__menu--element navbutton">HOẠT
-              ĐỘNG</a>
+            {{! <a href="hoat_dong" class="header-nav__menu--element navbutton">HOẠT
+              ĐỘNG</a> }}
             <a
               href="gioi_thieu"
               class="header-nav__menu--element navbutton"
@@ -147,48 +149,9 @@
       </div>
     </div>
     <!-- KHỞI TẠO KHUNG THÂN -->
-    <div class="under-header">
-      {{{body}}}
-    </div>
-    <div class="myfooter">
-      <div class="cr_body">
-        <script></script>
-        <div id="left">
-          <div class="content" id="left-content">
-            <p id="d1">
-              Trang web này được tạo ra nhằm mục đích phục vụ nghiên cứu, sử
-              dụng và học tập, không phục vụ các mục đích thương mại khác. Đây
-              là một trang web chưa hoàn thiện, chúc mọi người có những giây
-              phút tận hưởng thật tốt và nếu có gì không tốt hãy để lại
-              <strong>feedback</strong>.
-            </p>
-          </div>
-        </div>
-        <div id="right">
-          <div class="content">
-            <div id="function" id="right-content">
-              <a href="" class="right-content--link" id="facebook"><i
-                  class="fa-brands fa-facebook"
-                ></i></a>
-              <a href="" class="right-content--link" id="instagram"><i
-                  class="fa-brands fa-instagram"
-                ></i></a>
-              <a href="" class="right-content--link" id="gmail"><i
-                  class="fa-solid fa-envelope"
-                ></i></a>
-              <a href="" class="right-content--link" id="feedback"><strong
-                >Feedback</strong></a>
-            </div>
-            <div id="copyright">
-              <p id="copyright" style="color: white">
-                <i class="fa-regular fa-copyright"></i>
-                NoCopyright
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
+    {{{body}}}
+
+    <iframe class="footer" src="html/footer.html" frameborder="0"></iframe>
   </body>
 </html>
