@@ -3,7 +3,7 @@ function addHeader() {
     // Mã HTML của header
     var headerHTML = `
     <!-- KHỞI TẠO HEADER -->
-    <div class="header grid">
+    <div class="header grid" id = "webHeader">
         <!-- KHUNG HEADER -->
         <div class="header__grid">
             <!-- PHẦN CHÍNH CỦA HEADER -->
@@ -12,7 +12,7 @@ function addHeader() {
                 <div class="header-title--left header-title--elements">
                     <div class="header-title--left-icon">
                         <div class="header-title--left-icon--block">
-                            <img src="./pic/school_icon.png" alt="school">
+                            <img src="./pic/school_icon.jpg" alt="school">
                         </div>
                     </div>
                     <div class="header-title--left-sub">
@@ -40,28 +40,26 @@ function addHeader() {
                             <div class = "header-title--right-buttons-menu--show">
                                 <ul>
                                     <a class = "header-title--right-buttons-menu--show-elements" title = "Link to Facebook HVN" href = "https://www.facebook.com/profile.php?id=100028020954560&mibextid=ZbWKwL" target = "_blank">
-                                        <img class = "header-title--right-buttons-menu--show-elements--qrc" alt = "QR Code" src = "./pic/QRCode.png">
+                                        <img class = "header-title--right-buttons-menu--show-elements--qrc" alt = "QR Code" src = "./pic/QRCode.jpg">
                                         <i class = "header-title--right-buttons-menu--show-elements--fbi fa-brands fa-facebook fa-fade"> Facebook</i>
                                     </a> 
                                 </ul>
                             </div>
                         </div>
-                        <!-- NÚT LOGIN VÀ SIGNUP -->
-                        <div class="login-signup header-title--right-buttons--elements">
-                            <a class = "login button">LOGIN</a>
-                            <a class = "signup button">SIGN UP</a>
+                        <!-- AVT, TÊN USER VÀ THANH TÙY CHỈNH-->
+                        <div class="header__user header-title--right-buttons--elements">
+                            <a href = "thong_tin_thanh_vien.html" title = "Link to Profile" target = "_self" id="header__user--name">USER NAME</a>
+                            <img src="pic/user_avatar.jpg" title = "USER AVATAR" alt="USER AVATAR" id="header__user--avatar">
+                            <button class = "fa-solid fa-bars" id = "header__sidebar__button" onclick = set_side_bar()></button>
+                            <div id = "header__hideSidebar">
+                                <a href="" class="hideSidebar__option" id = "logOut"><i class="fa-solid fa-right-to-bracket"></i><span>Đăng xuất</span></a>
+                                <a href="" class="hideSidebar__option" id = "none"><i class="fa-solid fa-gears"></i><span>Đang hoàn thiện ...</span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="header-nav">
-                <!-- THANH SIDEBAR ẨN -->
-                <div class = "header-nav__sidebar-button" id = "main-sidebar--block">
-                    <button class = "fa-solid fa-caret-down" id = "main-sidebar--button" onclick = set_side_bar()></button>
-                    <div id="main-sidebar--hideblock">
-                        <iframe src = "sidebar.html"></iframe>
-                    </div>
-                </div>
                 <!-- NÚT TÌM KIẾM -->
                 <div class = "header-nav__search-block" id = "search--block">
                     <div class = "header-nav__search-block__button" id = "search--button">
@@ -73,13 +71,13 @@ function addHeader() {
                 </div>
                 <!-- THANH ĐIỀU HƯỚNG -->
                 <div class="header-nav__menu">
-                    <a href="index.html" class="header-nav__menu--element navbutton">TRANG CHỦ</a>
-                    <a href="thong_tin_hs.html" class="header-nav__menu--element navbutton">HỌC SINH</a>
-                    <a href="thong_tin_lop.html" class="header-nav__menu--element navbutton">LỚP</a>
-                    <a href="thong_tin_clb.html" class="header-nav__menu--element navbutton">NHÓM</a>
-                    <a href="thu_vien.html" class="header-nav__menu--element navbutton">THƯ VIỆN</a>
-                    <a href="hoat_dong.html" class="header-nav__menu--element navbutton">HOẠT ĐỘNG</a>
-                    <a href="gioi_thieu.html" class="header-nav__menu--element navbutton">GIỚI THIỆU</a>
+                    <a href="index.html" class="header-nav__menu--element navbutton--active">TRANG CHỦ</a>
+                    <a href="thong_tin_thanh_vien.html" class="header-nav__menu--element navbutton--normal">THÀNH VIÊN</a>
+                    <a href="thong_tin_lop.html" class="header-nav__menu--element navbutton--normal">LỚP</a>
+                    <a href="thong_tin_nhom.html" class="header-nav__menu--element navbutton--normal">NHÓM</a>
+                    <a href="thu_vien.html" class="header-nav__menu--element navbutton--normal">THƯ VIỆN</a>
+                    <a href="gioi_thieu.html" class="header-nav__menu--element navbutton--normal">GIỚI THIỆU</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton--normal" style = "color: gray">CHỨC NĂNG THỬ NGHIỆM (ĐĂNG NHẬP)</a>
                 </div>
             </div>
         </div>
@@ -90,21 +88,29 @@ function addHeader() {
 }
 
 // Gọi hàm addHeader khi trang web được tải
-window.onload = addHeader;
+// VÀ
+// ADD ALL FILE CSS, (SUPPORT FOR BACK_END)
+window.onload = function(){
+    addHeader()
 
-// SEARCH_BAR
-function set_search_bar(){
-    let search_bar = document.getElementById("search--bar");
-    let style = window.getComputedStyle(search_bar);
-    let animation = style.animationName;
-    search_bar.style.display = "flex";
+    let links = [
+        "css/base.css",
+        "css/header.css",
+        "css/dang_nhap/body.css",
+        "css/gioi_thieu/body.css",
+        "css/thong_tin_lop/body.css",
+        "css/thong_tin_nhom/body.css",
+        "css/thong_tin_thanh_vien/body.css",
+        "css/thu_vien/body.css",
+        "css/thu_vien/sidebar.css",
+        "css/trang_chu/body.css"
+    ];
 
-    if(animation == "fade-out"){
-        search_bar.style.animationName = "fade-in";
-    } else if (animation == "fade-in"){
-        search_bar.style.animationName = "fade-out";
-    } else {
-        search_bar.style.animationName = "fade-in";
-    };
-    
+    for (let i = 0; i < links.length; i++) {
+        let link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = links[i];
+        document.head.appendChild(link);
+    }
+
 }

@@ -1,12 +1,4 @@
-.body{
-    position: relative;
-}
-
-.body--part{
-    display: inline-block;
-}
-
-.body-left{
+.body-left4{
     position: relative;
     width: 20%;
     height: 100vh;
@@ -14,7 +6,7 @@
     background-color: rgb(255, 255, 255);
 }
 
-.body-right{
+.body-right4{
     position: relative;
     width: 80%;
 }

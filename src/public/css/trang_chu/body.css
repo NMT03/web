@@ -1,4 +1,11 @@
-.body-center{
+.body-left0{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.body-center0{
     position: relative;
     left: 20%;
     top: 0;
@@ -8,7 +15,7 @@
 }
 
 /* LEFT */
-.body-left__element{
+.body-left0__element{
     position: relative;
 
     display: flex;
@@ -21,16 +28,16 @@
     background-color: rgb(255, 255, 255);
 }
 
-.body-left__element h3{
+.body-left0__element h3{
     font-size: 1.3em;
 }
 
-.body-left__element--list{
+.body-left0__element--list{
     padding: 0;
     list-style: none;
 }
 
-.body-left__element--list--obj{
+.body-left0__element--list--obj{
     position: relative;
 
     display: flex;
@@ -42,13 +49,13 @@
     font-size: 1em;
 }
 
-.body-left__element--list--obj:hover{
+.body-left0__element--list--obj:hover{
     background-color: rgb(37, 37, 37);
     color: rgb(255, 255, 255);
 }
 
 /* CENTER */
-.body-center__content{
+.body-center0__content{
     display: flex;
     flex-direction: column;
 
@@ -60,7 +67,7 @@
     border-radius: 1.5vw;
 }
 
-.body-center__content ul.a{
+.body-center0__content ul.a{
     padding-bottom: 2%;
     padding-left: 5%;
 
@@ -68,7 +75,7 @@
     border-radius: 1.5vw;
 }
 
-.body-center__content ul.p{
+.body-center0__content ul.p{
     padding-bottom: 2%;
     padding-left: 5%;
 
@@ -76,7 +83,7 @@
     border-radius: 1.5vw;
 }
 
-.body-center__content--a_element{
+.body-center0__content--a_element{
     display: flex;
 
     background-color: rgb(255, 244, 194);
@@ -86,22 +93,18 @@
     margin-right: 5%;
 }
 
-.body-center__content--a_element:hover{
+.body-center0__content--a_element:hover{
     background-color: rgb(37, 37, 37);
     color: rgb(255, 255, 255);    
 }
 
-.body-center__content--p_element{
+.body-center0__content--p_element{
     background-color: rgb(243, 243, 243);
     color: rgb(37, 37, 37);
     padding: 1% 5%;
     margin-right: 5%;
 }
 
-.body-center__content--listblock{
+.body-center0__content--listblock{
     border: 0.2vw solid rgb(56, 56, 56);
-}
-
-.body-center__content--title{
-    margin-right: 5%;
 }

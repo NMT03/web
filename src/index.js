@@ -21,7 +21,7 @@ app.set("views", path.join(__dirname, "resources\\views"));
 if (dinhdanh) {
   route(app);
 } else {
-  app.use("/", (home = router));
+  app.use("/", (homerouter));
 }
 
 app.listen(port);

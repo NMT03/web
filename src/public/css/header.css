@@ -177,7 +177,7 @@
 }
 
 .header-title--right-buttons-menu{
-    position: absolute;
+    position: relative;
     width: 30%;
 
     display: flex;
@@ -185,27 +185,6 @@
     align-items: center;
 }
 
-.login-signup{
-    position: absolute;
-    right: 1vw;
-    width: 60%;
-    min-width: none;
-    max-width: 250px;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-
-    padding: 1vw 0vw;
-    font-size: 1.1em;
-}
-
-@media screen and (min-width: 1400px){
-    .login-signup{
-        padding: 14px 0vw;
-    }    
-}
 
 .header-title--right-buttons-menu--icon{
     position: absolute;
@@ -217,7 +196,7 @@
     padding: 01vw;
     margin-left: 1vw;
     border-radius: 3vw;
-    background-color: rgb(44, 44, 44);
+    background-color: transparent;
     font-size: 1em;
 }
 
@@ -225,6 +204,162 @@
     margin-left: 0.5vw;
     font-size: 0.6em;
 }
+
+.header__user{
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 60%;
+
+    display: flex;
+    align-items: center;
+
+    margin-left: 7%;
+
+    font-size: 1.2vw;
+}
+
+#header__user--name::-webkit-scrollbar {
+    height: 0.3vw;
+    min-height: 0.93px;
+    max-height: 4.2px;
+
+    background: rgb(220, 220, 220);
+}
+
+#header__user--name::-webkit-scrollbar-thumb {
+    background: #6c6c6c;
+}
+
+#header__user--name::-webkit-scrollbar-thumb:hover {
+    background: #ababab;
+}
+
+@media screen and (max-width: 310px) {
+    #header__user{
+        font-size: 3.72px
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #header__user{
+        font-size: 16.8px
+    }
+}
+
+#header__user--avatar{
+    width: 3vw;
+    min-width: 9.3px;
+    max-width: 42px;
+    height: 3vw;
+    min-height: 9.3px;
+    max-height: 42px;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    margin-left: 5%;
+}
+
+#header__user--name{
+
+    width: max-content;
+    min-width: 40%;
+    max-width: 50%;
+
+    text-wrap: nowrap;
+    margin-left: 5%;
+    font-size: 0.9em;
+    color: white;
+
+    overflow-x: auto;
+}
+
+#header__user--name:hover{
+    opacity: 0.7;
+}
+
+#header__sidebar__button{
+    width: 15%;
+
+    margin-left: 5%;
+    font-size: 1.5em;
+    border: 0;
+
+    background-color: transparent;
+    color:rgb(255, 255, 255);
+
+    transition: opacity 0.3s;
+}
+
+#header__sidebar__button:hover{
+    opacity: 0.7 !important;
+    cursor: pointer;
+}
+
+#header__sidebar__button:active{
+    opacity: 0.5 !important;
+    cursor: pointer;
+}
+
+/* HIDE SIDEBAR */
+#header__hideSidebar{
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    top: 110%;
+    width: max-content;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+    box-shadow: 0 0 0.5vw 0.1vw rgb(224, 224, 224);
+    border-radius: 0.5vw;
+
+    padding: 5% 10%;
+
+    font-size: 1.1em;
+
+    z-index: 1;
+}
+
+.hideSidebar__option{
+    text-wrap: nowrap;
+
+    color: black;
+
+    transition: color 0.2s;
+    transition: opacity 0.3s;
+}
+
+.hideSidebar__option + .hideSidebar__option{
+    margin-top: 5%;
+}
+
+.hideSidebar__option:hover{
+    color: gray;
+}
+
+.hideSidebar__option:active{
+    opacity: 0.7;
+}
+
+.hideSidebar__option i{
+    position: relative;
+    max-width: 10%;
+}
+
+.hideSidebar__option#none{
+    color: gray;
+    font-size: 0.6em;
+}
+
+.hideSidebar__option span{
+    position: relative;
+    margin-left: 10%;
+}
+
 /* MENU SHOW QR AND LINK */
 .header-title--right-buttons-menu--show{
     z-index: 1;
@@ -308,49 +443,6 @@
     .header-title--right-buttons-menu--show-elements--fbi{
         top: 7px;
         font-size: 18.06px;
-    }
-}
-/* END OF MENU SHOW QR AND LINK */
-.login{
-    position: absolute;
-    left: 0;
-    min-width: max-content;
-    height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    margin-right: 1vw;
-    padding: 0 1vw;
-    background-color: rgb(87, 225, 2);
-}
-
-@media screen and (min-width: 1400px){
-    .login{
-        margin-right: 14px;
-        padding: 0 9.8px;
-    }
-}
-
-.signup{
-    position: absolute;
-    right: 2vw;
-    min-width: max-content;
-    height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 0 1vw;
-    background-color: rgb(234, 117, 0);
-}
-
-@media screen and (min-width: 1400px) {
-    .signup{
-        right: 28px;
-        padding: 0 14px;
     }
 }
 
@@ -595,100 +687,5 @@
 @media screen and (min-width: 1400px){
     #search--bar input{
         border-radius: 0 4.2px 0;
-    }
-}
-
-/* HIDE SIDEBAR */
-#main-sidebar{
-    display: none;
-}
-
-#main-sidebar--block{
-    position: relative;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 3vw;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 0.7vw;
-}
-
-@media screen and (max-width: 310px){
-    #main-sidebar--block{
-        width: 9.3px;
-        font-size: 2.17px;
-    }
-}
-
-@media screen and (min-width: 1400px){
-    #main-sidebar--block{
-        width: 42px;
-        font-size: 9.8px;
-    }
-}
-
-#main-sidebar--button{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-
-    padding: 0;
-    border: none;
-
-    color: white;
-    background-image: linear-gradient(70deg, rgb(112, 213, 186), rgb(40, 135, 195));
-    font-size: 2em;
-
-    transition: opacity 0.3s ease;
-    transition: color 0.3s ease;
-    transform: rotateX(0deg);
-}
-
-#main-sidebar--button:hover{
-    opacity: 0.8;
-}
-
-#main-sidebar--button:active{
-    opacity: 0.8;
-    color: black;
-    background-image: linear-gradient(70deg, rgb(11, 68, 167), rgb(28, 223, 161));
-}
-
-/* SIDE BAR -> sidebar.html */
-#main-sidebar--hideblock{
-    visibility: hidden;
-    position: fixed;
-    left: 0;
-    top: 8vw;
-    bottom: 0;
-    width: 20vw;
-    min-width: calc(310px*20/100);
-    
-    background-color: rgb(234, 234, 234);
-}
-
-#main-sidebar--hideblock iframe{
-    position: relative;
-    width: 100%;
-    height: 100%;
-
-    border: none;
-}
-
-@media screen and (max-width: 312.5px){
-    #main-sidebar--hideblock{
-        top: 25px;
-    }
-}
-
-@media screen and (min-width: 1250px){
-    #main-sidebar--hideblock{
-        top: 100px;
     }
 }
