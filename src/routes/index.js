@@ -24,7 +24,7 @@ function route(app) {
 
   app.use("/DB", DBrouter);
 
-  app.use("/dang_nhap", loginrouter);
+  app.use("/login", loginrouter);
 
   app.use("/", loginrouter);
 }
