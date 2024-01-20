@@ -7,6 +7,8 @@ const app = express();
 const port = 3000;
 const route = require("./routes");
 const bodyParser = require("body-parser");
+const { log } = require("console");
+const jwt = require("jsonwebtoken");
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(morgan("combined"));
@@ -23,6 +25,7 @@ app.use(bodyParser.json());
 
 // Routes
 // route(app);
+
 route(app);
 
 app.listen(port);

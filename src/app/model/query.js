@@ -1,8 +1,8 @@
 const DB = require("./DBconnect");
 
-DB.connect(function (err) {
-  if (err) console.log(err);
-});
+// DB.connect(function (err) {
+//   if (err) console.log(err);
+// });
 
 class my_db {
   async get_data(SQL_statement_) {
