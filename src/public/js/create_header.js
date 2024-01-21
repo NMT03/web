@@ -3,6 +3,7 @@ function addHeader() {
     // Mã HTML của header
     var headerHTML = `
     <!-- KHỞI TẠO HEADER -->
+    <link rel="stylesheet" href="css/header.css">
     <div class="header grid" id = "webHeader">
         <!-- KHUNG HEADER -->
         <div class="header__grid">
@@ -71,12 +72,12 @@ function addHeader() {
                 </div>
                 <!-- THANH ĐIỀU HƯỚNG -->
                 <div class="header-nav__menu">
-                    <a href="index.html" class="header-nav__menu--element navbutton--active">TRANG CHỦ</a>
-                    <a href="thong_tin_thanh_vien.html" class="header-nav__menu--element navbutton--normal">THÀNH VIÊN</a>
-                    <a href="thong_tin_lop.html" class="header-nav__menu--element navbutton--normal">LỚP</a>
-                    <a href="thong_tin_nhom.html" class="header-nav__menu--element navbutton--normal">NHÓM</a>
-                    <a href="thu_vien.html" class="header-nav__menu--element navbutton--normal">THƯ VIỆN</a>
-                    <a href="gioi_thieu.html" class="header-nav__menu--element navbutton--normal">GIỚI THIỆU</a>
+                    <a href="index.html" class="header-nav__menu--element navbutton--normal" id = "page0">TRANG CHỦ</a>
+                    <a href="thong_tin_thanh_vien.html" class="header-nav__menu--element navbutton--normal" id = "page1">THÀNH VIÊN</a>
+                    <a href="thong_tin_lop.html" class="header-nav__menu--element navbutton--normal" id = "page2">LỚP</a>
+                    <a href="thong_tin_nhom.html" class="header-nav__menu--element navbutton--normal" id = "page3">NHÓM</a>
+                    <a href="thu_vien.html" class="header-nav__menu--element navbutton--normal" id = "page4">THƯ VIỆN</a>
+                    <a href="gioi_thieu.html" class="header-nav__menu--element navbutton--normal" id = "page5">GIỚI THIỆU</a>
                     <a href="dang_nhap.html" class="header-nav__menu--element navbutton--normal" style = "color: gray">CHỨC NĂNG THỬ NGHIỆM (ĐĂNG NHẬP)</a>
                 </div>
             </div>
@@ -87,30 +88,49 @@ function addHeader() {
     document.body.insertAdjacentHTML('afterbegin', headerHTML);
 }
 
+// // ANIMOTION HEADER NAV
+// var list_element = [];
+// function addEvent(){
+//     let elements = document.getElementsByClassName("header-nav__menu--element");
+//     console.log(elements)
+
+//     for(let i = 0; i < elements.length; i++){
+//         elements[i].addEventListener('click', function() {
+//             console.log("part 1")
+//             // Reset all elements to normal
+//             for(let j = 0; j < elements.length; j++){
+//                 elements[j].classList.remove("navbutton--active");
+//                 elements[j].classList.add("navbutton--normal");
+//             }
+
+//             // Set the clicked element to active
+//             this.classList.remove("navbutton--normal");
+//             this.classList.add("navbutton--active");
+//         });
+//     }
+// }
+
 // Gọi hàm addHeader khi trang web được tải
-// VÀ
-// ADD ALL FILE CSS, (SUPPORT FOR BACK_END)
 window.onload = function(){
-    addHeader()
-
-    let links = [
-        "css/base.css",
-        "css/header.css",
-        "css/dang_nhap/body.css",
-        "css/gioi_thieu/body.css",
-        "css/thong_tin_lop/body.css",
-        "css/thong_tin_nhom/body.css",
-        "css/thong_tin_thanh_vien/body.css",
-        "css/thu_vien/body.css",
-        "css/thu_vien/sidebar.css",
-        "css/trang_chu/body.css"
-    ];
-
-    for (let i = 0; i < links.length; i++) {
-        let link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = links[i];
-        document.head.appendChild(link);
-    }
-
+    addHeader();
 }
+
+// let links = [
+//     "css/base.css",
+//     "css/header.css",
+//     "css/dang_nhap/body.css",
+//     "css/gioi_thieu/body.css",
+//     "css/thong_tin_lop/body.css",
+//     "css/thong_tin_nhom/body.css",
+//     "css/thong_tin_thanh_vien/body.css",
+//     "css/thu_vien/body.css",
+//     "css/thu_vien/sidebar.css",
+//     "css/trang_chu/body.css"
+// ];
+
+// for (let i = 0; i < links.length; i++) {
+//     let link = document.createElement('link');
+//     link.rel = 'stylesheet';
+//     link.href = links[i];
+//     document.head.appendChild(link);
+// }
