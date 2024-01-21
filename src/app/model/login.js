@@ -1,51 +1,31 @@
 const { TRUE } = require("node-sass");
 const DB = require("./DBconnect");
+const util = require("util");
+
+DB.query = util.promisify(DB.query);
 
 class check_acc {
-  async check_super_admin(tk, mk) {
+  async checkAccount(tk, mk) {
     let sql =
       "SELECT * FROM `super_admin_acc` WHERE `ma_super_admin` = ? AND `pass` = ?";
-    try {
-      const results = await new Promise((resolve, reject) => {
-        DB.query(sql, [tk, mk], function (err, results) {
-          if (err) {
-            reject(err);
-          } else {
-            resolve(results);
-          }
-        });
-      });
-      if (results.length == 0) {
-        this.ok = 0;
+    let results = await DB.query(sql, [tk, mk]);
+
+    if (results.length > 0) {
+      this.per = results[0].permission;
+      this.username = "super_admin";
+    } else {
+      sql = "SELECT * FROM `normal_acc` WHERE `ma_tk` = ? AND `pass` = ?";
+      results = await DB.query(sql, [tk, mk]);
+
+      if (results.length > 0) {
+        this.per = results[0].permission;
+        sql = "SELECT ho_ten FROM thanh_vien WHERE ma_tv = ?";
+        results = await DB.query(sql, [tk]);
+        // console.log(results[0].ho_ten);
+        this.username = results[0].ho_ten;
       } else {
-        this.ok = 1;
+        this.per = 0;
       }
-    } catch (err) {
-      // Xử lý lỗi
-      console.error("Có lỗi xảy ra:", err);
-    }
-  }
-  async check_admin(tkad, tk, mk) {
-    let sql =
-      "SELECT * FROM `admin_acc` WHERE `ma_super_admin` = ? AND `pass` = ?";
-    try {
-      const results = await new Promise((resolve, reject) => {
-        DB.query(sql, [tk, mk], function (err, results) {
-          if (err) {
-            reject(err);
-          } else {
-            resolve(results);
-          }
-        });
-      });
-      if (results.length == 0) {
-        this.ok = false;
-      } else {
-        this.ok = true;
-      }
-    } catch (err) {
-      // Xử lý lỗi
-      console.error("Có lỗi xảy ra:", err);
     }
   }
 }

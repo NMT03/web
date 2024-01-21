@@ -1,6 +1,6 @@
 const trangchurouter = require("./trangchu");
 const loginrouter = require("./login");
-const hsrouter = require("./hs");
+const thanhvienrouter = require("./thanhvien");
 const loprouter = require("./lop");
 const nhomrouter = require("./nhom");
 const thuvienrouter = require("./thuvien");
@@ -10,7 +10,7 @@ const gtrouter = require("./gioithieu");
 function route(app) {
   app.use("/trang_chu", trangchurouter);
 
-  app.use("/thanh_vien", hsrouter);
+  app.use("/thanh_vien", thanhvienrouter);
 
   app.use("/lop", loprouter);
 
@@ -18,11 +18,9 @@ function route(app) {
 
   app.use("/thu_vien", thuvienrouter);
 
-  app.use("/login", loginrouter);
-
   app.use("/gioi_thieu", gtrouter);
 
-  app.use("/DB", DBrouter);
+  // app.use("/DB", DBrouter);
 
   app.use("/login", loginrouter);
 
