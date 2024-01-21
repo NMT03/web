@@ -32,7 +32,9 @@
       crossorigin="anonymous"
     ></script>
     {{! ______ }}
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
 
   </head>
   <body>
@@ -119,10 +121,10 @@
                   onclick="set_side_bar()"
                 ></button>
                 <div id="header__hideSidebar">
-                  <a href="" class="hideSidebar__option" id="logOut"><i
+                  <a href="login" class="hideSidebar__option" id="logOut"><i
                       class="fa-solid fa-right-to-bracket"
                     ></i><span>Đăng xuất</span></a>
-                  <a href="" class="hideSidebar__option" id="none"><i
+                  <a href="login" class="hideSidebar__option" id="none"><i
                       class="fa-solid fa-gears"
                     ></i><span>Đang hoàn thiện ...</span></a>
                 </div>
@@ -169,11 +171,11 @@
               href="gioi_thieu"
               class="header-nav__menu--element navbutton--normal"
             >GIỚI THIỆU</a>
-            <a
+            {{! <a
               href="login"
               class="header-nav__menu--element navbutton--normal"
               style="color: gray"
-            >CHỨC NĂNG THỬ NGHIỆM (ĐĂNG NHẬP)</a>
+            >CHỨC NĂNG THỬ NGHIỆM (ĐĂNG NHẬP)</a> }}
           </div>
         </div>
       </div>

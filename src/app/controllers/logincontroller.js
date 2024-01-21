@@ -3,17 +3,15 @@ const jwt = require("jsonwebtoken");
 // const cookies = require("cookiesjs");
 
 class logincontroller {
-  //home
+  //login
   index(req, res) {
     res.render("login");
   }
 
   async check_account(req, res, next) {
-    // let tkad = req.body.tkad;
     let tk = req.body.tk;
     let mk = req.body.mk;
     console.log(tk, mk);
-
     try {
       await checklogin.checkAccount(tk, mk).catch(console.error);
       if (checklogin.per == 0) {
@@ -23,22 +21,27 @@ class logincontroller {
           { tk: tk, name: checklogin.username, per: checklogin.per },
           "03"
         );
-        console.log(jwt.verify(token, "03"));
-        console.log(token);
-        console.log("cookie:", req.cookies);
-        if (checklogin.per == 3) {
-          res.render("login", { layout: "using", status: checklogin.username });
-        } else {
-          res.render("login", {
+
+        console.log("token:", token);
+
+        if (checklogin.per != 0) {
+          res.cookie("token_", token);
+          res.render("trangchu", {
             layout: "using",
             status: checklogin.username,
           });
         }
-        // res.json(token);
       }
     } catch (err) {
-      // Xử lý lỗi
       console.error("Có lỗi xảy ra:", err);
+    }
+  }
+
+  check_per(req, res, next) {
+    let token = req.cookies.token_;
+    let user_infor = jwt.verify(token, "03");
+    if (user_infor) {
+      next();
     }
   }
 }
