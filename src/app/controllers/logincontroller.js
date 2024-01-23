@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken");
 class logincontroller {
   //login
   index(req, res) {
+    res.cookie("token_", "");
     res.render("login");
   }
 
@@ -39,9 +40,13 @@ class logincontroller {
 
   check_per(req, res, next) {
     let token = req.cookies.token_;
-    let user_infor = jwt.verify(token, "03");
-    if (user_infor) {
-      next();
+    if (token == "") {
+      res.render("login");
+    } else {
+      let user_infor = jwt.verify(token, "03");
+      if (user_infor) {
+        next();
+      }
     }
   }
 }
