@@ -1,105 +1,423 @@
-<!-- BODY BODY BODY -->
-<!-- KHỞI TẠO KHUNG THÂN -->
-<div class="under-header">
-    <!-- KHỞI TẠO KHUNG BODY -->
-    <div class = "body grid">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- TOP CSS -->
+    <link rel="stylesheet" href="css/base.css" />
+
+    <!-- BELOW CSS -->
+    <link rel="stylesheet" href="css/thong_tin_nhom/body.css" />
+
+    <!-- JAVASCRIPT -->
+    <script src="js/create_header.js"></script>
+    <script src="js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0afaeea3b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>CÂU LẠC BỘ</title>
+  </head>
+  <body>
+    <!-- BODY BODY BODY -->
+    <!-- KHỞI TẠO KHUNG THÂN -->
+    <div class="under-header">
+      <!-- KHỞI TẠO KHUNG BODY -->
+      <div class="body grid">
         <!-- KHUNG BODY -->
         <div class="body__content">
-            <!-- TRÁI BODY -->
-            <div class="body-left3 body-part">
-                <div class="body-left3__block set-scrollbar--x">
-                    <div class="body-left3__search-block">
-                        <i class="fa-solid fa-magnifying-glass" id = "body-left3__search--icon"></i>
-                        <input type="text" class="body-left3__search--part" id = "body-left3__search--input" placeholder = "Tìm kiếm">
-                    </div>
-                    <div class="body-left3__result-block">
-                        <ul class="body-left3__result-block--list" style = "list-style: none; color: black; padding-left: 0;">
-                            {{!-- <li class="body-left3__result-block__element">
-                                <a href="" class="body-left3__result-block--link">Test_resultA00</a>
-                            </li> FORM FOR THIS LIST--}}
-                        </ul>
-                    </div>
-                    <div class="sideBar paddingBottom" style="color: black"><i class="fa-solid fa-circle-info"></i>Đã hết danh sách</div>
-                </div>
+          <!-- TRÁI BODY -->
+          <div class="body-left3 body-part">
+            <div class="body-left3__block set-scrollbar--x">
+              <div class="body-left3__search-block">
+                <i
+                  class="fa-solid fa-magnifying-glass"
+                  id="body-left3__search--icon"
+                ></i>
+                <input
+                  type="text"
+                  class="body-left3__search--part"
+                  id="body-left3__search--input"
+                  placeholder="Tìm kiếm"
+                />
+              </div>
+              <div class="body-left3__result-block">
+                <ul
+                  class="body-left3__result-block--list"
+                  style="list-style: none; color: black; padding-left: 0;"
+                >
+                  <li class="body-left3__result-block__element">
+                    <a
+                      href=""
+                      class="body-left3__result-block--link"
+                    >Test_resultA00</a>
+                  </li>
+                  <li class="body-left3__result-block__element">
+                    <a
+                      href=""
+                      class="body-left3__result-block--link"
+                    >Test_resultA00</a>
+                  </li>
+                  <li class="body-left3__result-block__element">
+                    <a
+                      href=""
+                      class="body-left3__result-block--link"
+                    >Test_resultA00</a>
+                  </li>
+                  <li class="body-left3__result-block__element">
+                    <a
+                      href=""
+                      class="body-left3__result-block--link"
+                    >Test_resultA00</a>
+                  </li>
+                  <li class="body-left3__result-block__element">
+                    <a
+                      href=""
+                      class="body-left3__result-block--link"
+                    >Test_resultA00</a>
+                  </li>
+                  <li class="body-left3__result-block__element">
+                    <a
+                      href=""
+                      class="body-left3__result-block--link"
+                    >Test_resultA00</a>
+                  </li>
+                  <li class="body-left3__result-block__element">
+                    <a
+                      href=""
+                      class="body-left3__result-block--link"
+                    >Test_resultA00</a>
+                  </li>
+                  <li class="body-left3__result-block__element">
+                    <a
+                      href=""
+                      class="body-left3__result-block--link"
+                    >Test_resultA00</a>
+                  </li>
+                  <li class="body-left3__result-block__element">
+                    <a
+                      href=""
+                      class="body-left3__result-block--link"
+                    >Test_resultA00</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="sideBar paddingBottom" style="color: black"><i
+                  class="fa-solid fa-circle-info"
+                ></i>Đã hết danh sách</div>
             </div>
-            <!-- GIỮA BODY -->
-            <div class="body-center3 body-part">
-                <!-- CÁC PHẦN TỬ CON -->
-                <div class="body-center3__content" id="pictures-block">
-                    <div id="pictures--background">
-                        <img src = "pic/club_background.jpg"  alt = "background" id = "background">
-                        <div id="pictures--avatar">
-                            <img src = "pic/club_avatar.jpg" alt = "avatar" id = "avatar">
-                            <i class="fa-regular fa-image" id = "addAvatar"></i>
-                        </div>
-                    </div>                   
+          </div>
+          <!-- GIỮA BODY -->
+          <div class="body-center3 body-part">
+            <!-- CÁC PHẦN TỬ CON -->
+            <div class="Acontent__table" id="pictures-block">
+              <div id="pictures--background">
+                <img
+                  src="pic/club_background.jpg"
+                  alt="background"
+                  id="background"
+                />
+                <div id="pictures--avatar">
+                  <img src="pic/club_avatar.jpg" alt="avatar" id="avatar" />
+                  <i class="fa-regular fa-image" id="addAvatar"></i>
                 </div>
-                <div class="body-center3__content">
-                    <ul class = "body-center3__content--listblock p">
-                        <h1 class = "body-center3__content--title contentBox__title">THÔNG TIN NHÓM</h1>
-                        <p href = "" class="body-center3__content--p_element">TÊN: <span id = "club--name"></span></p>
-                        <p href = "" class="body-center3__content--p_element">NGÀY THÀNH LẬP: <span id = "club--date"></span></p>
-                        <p href = "" class="body-center3__content--p_element">SỐ THÀNH VIÊN: <span id = "club--members"></span></p>
-                        <p href = "" class="body-center3__content--p_element">HỘI CHỦ: <span id = "club--monitor"></span></p>
-                        <p href = "" class="body-center3__content--p_element">HỘI PHÓ: <span id = "club--viceMonitor"></span></p>
-                    </ul>
-                </div>
-                <div class="body-center3__content">
-                    <ul class = "body-center3__content--listblock p">
-                        <h1 class = "body-center3__content--title contentBox__title">THÔNG TIN LIÊN HỆ</h1>
-                        <p href = "" class="body-center3__content--p_element">EMAIL: <a href = "" id = "club--email" style = "color: rgb(70, 166, 201)"></a></p>
-                        <p href = "" class="body-center3__content--p_element">FACEBOOK: <a href = "" id = "club--facebook" style = "color: rgb(70, 166, 201)"></a></p>
-                        <p href = "" class="body-center3__content--p_element">SĐT: <span id = "club--phone"></span></p>
-                    </ul>
-                </div>
-                <div class="body-center3__content">
-                    <ul class = "body-center3__content--listblock p">
-                        <h1 class = "body-center3__content--title contentBox__title">DANH SÁCH THÀNH VIÊN</h1>
-                        <div class="body-center3__container">
-                            <div class="body-center3__container__element">
-                                <div class="body-center3__element--name body-center3__container__element--part container__element--heading">TÊN</div>
-                                <div class="body-center3__element--gender body-center3__container__element--part container__element--heading">GIỚI TÍNH</div>
-                                <div class="body-center3__element--date body-center3__container__element--part container__element--heading">NGÀY SINH</div>
-                                <div class="body-center3__element--doanvien body-center3__container__element--part container__element--heading">ĐOÀN VIÊN</div>
-                                <div class="body-center3__element--class body-center3__container__element--part container__element--heading">LỚP</div>
-                                <div class="body-center3__element--position body-center3__container__element--part container__element--heading">CHỨC VỤ</div>
-                                <div class="body-center3__element--phone body-center3__container__element--part container__element--heading">SĐT</div>
-                                <div class="body-center3__element--email body-center3__container__element--part container__element--heading">EMAIL</div>
-                            </div>
-                            <div class="body-center3__container__element">
-                                <div class="body-center3__element--name body-center3__container__element--part">Trần Bảo Toàn</div>
-                                <div class="body-center3__element--gender body-center3__container__element--part">Nam</div>
-                                <div class="body-center3__element--date body-center3__container__element--part">05/12/2006</div>
-                                <div class="body-center3__element--doanvien body-center3__container__element--part">Có</div>
-                                <div class="body-center3__element--class body-center3__container__element--part">12.05</div>
-                                <div class="body-center3__element--position body-center3__container__element--part">Chủ hội</div>
-                                <div class="body-center3__element--phone body-center3__container__element--part">0982938647</div>
-                                <a class="body-center3__element--email body-center3__container__element--part" href = "">tranbaotoan@gmail.com</a>
-                            </div>
-                            <div class="body-center3__container__element">
-                                <div class="body-center3__element--name body-center3__container__element--part">Nguyễn Hữu Tài</div>
-                                <div class="body-center3__element--gender body-center3__container__element--part">Nam</div>
-                                <div class="body-center3__element--date body-center3__container__element--part">22/03/2006</div>
-                                <div class="body-center3__element--doanvien body-center3__container__element--part">Có</div>
-                                <div class="body-center3__element--class body-center3__container__element--part">12.10</div>
-                                <div class="body-center3__element--position body-center3__container__element--part">Hội phó</div>
-                                <div class="body-center3__element--phone body-center3__container__element--part">0837485912</div>
-                                <a class="body-center3__element--email body-center3__container__element--part" href = "">nguyentai206@gmail.com</a>
-                            </div>
-                            <div class="body-center3__container__element">
-                                <div class="body-center3__element--name body-center3__container__element--part">Trần Ngọc Nhi</div>
-                                <div class="body-center3__element--gender body-center3__container__element--part">Nữ</div>
-                                <div class="body-center3__element--date body-center3__container__element--part">25/06/2006</div>
-                                <div class="body-center3__element--doanvien body-center3__container__element--part">Có</div>
-                                <div class="body-center3__element--class body-center3__container__element--part">12.03</div>
-                                <div class="body-center3__element--position body-center3__container__element--part">Thư kí</div>
-                                <div class="body-center3__element--phone body-center3__container__element--part">0827364512</div>
-                                <a class="body-center3__element--email body-center3__container__element--part" href = "">ngocnhi12345@gmail.com</a>
-                            </div>
-                        </div>
-                    </ul>
-                </div>
+              </div>
             </div>
-        </div> 
+            <!-- CHỈNH SỬA -->
+            <div id="updateInfoDiv" class="set-scrollbar--y" style="margin: 2%">
+              <div
+                class="updateInfoDiv__element updateInfoDiv__pic"
+                onclick="show_updateInfoDiv(0)"
+              >
+                <span><i class="fa-solid fa-image"></i>
+                  Thay đổi ảnh đại diện</span>
+              </div>
+              <div
+                class="updateInfoDiv__element updateInfoDiv__infomation"
+                onclick="show_updateInfoDiv(1)"
+              >
+                <span><i class="fa-solid fa-pen"></i>
+                  Cập nhật thông tin nhóm</span>
+              </div>
+            </div>
+            <!-- CHỈNH SỬA -->
+            <div class="Acontent__table">
+              <p class="Acontent__table__header">THÔNG TIN NHÓM</p>
+              <div class="Acontent__table__contentText">
+                <div class="Acontent__table__contentText__element">
+                  <span class="Acontent__table__contentText__element__title">TÊN
+                    NHÓM</span>
+                  <span class="Acontent__table__contentText__element__main">YÊU
+                    ĐỒNG BÀO</span>
+                </div>
+                <div class="Acontent__table__contentText__element">
+                  <span
+                    class="Acontent__table__contentText__element__title"
+                  >NGÀY TẠO</span>
+                  <span
+                    class="Acontent__table__contentText__element__main"
+                  >29/01/2024</span>
+                </div>
+                <div class="Acontent__table__contentText__element">
+                  <span class="Acontent__table__contentText__element__title">SỐ
+                    THÀNH VIÊN</span>
+                  <span
+                    class="Acontent__table__contentText__element__main"
+                  >24</span>
+                </div>
+                <div class="Acontent__table__contentText__element">
+                  <span class="Acontent__table__contentText__element__title">CHỦ
+                    HỘI</span>
+                  <span
+                    class="Acontent__table__contentText__element__main"
+                  >Nguyễn Thành Tâm</span>
+                </div>
+                <div class="Acontent__table__contentText__element">
+                  <span class="Acontent__table__contentText__element__title">HỘI
+                    PHÓ</span>
+                  <span
+                    class="Acontent__table__contentText__element__main"
+                  >Nguyễn Quốc Toàn</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="Acontent__table">
+              <p class="Acontent__table__header">THÔNG TIN LIÊN HỆ</p>
+              <div class="Acontent__table__contentText">
+                <div class="Acontent__table__contentText__element">
+                  <span
+                    class="Acontent__table__contentText__element__title"
+                  >EMAIL</span>
+                  <span
+                    class="Acontent__table__contentText__element__main"
+                  >groupyeudongbao@gmail.com</span>
+                </div>
+                <div class="Acontent__table__contentText__element">
+                  <span
+                    class="Acontent__table__contentText__element__title"
+                  >FACEBOOK</span>
+                  <span
+                    class="Acontent__table__contentText__element__main"
+                  >Không</span>
+                </div>
+                <div class="Acontent__table__contentText__element">
+                  <span
+                    class="Acontent__table__contentText__element__title"
+                  >SĐT</span>
+                  <span
+                    class="Acontent__table__contentText__element__main"
+                  >0897862561</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+    <style>
+      #page3{ color: white !important; background-color: rgb(60, 60, 60);
+      transition: opacity 0.3s ease-out; transition: background-color 0.6s
+      ease-out; transition: color 0.7s ease-out; }
+    </style>
+    <!-- FOOTER FOOTER FOOTER -->
+    <!-- PHẦN CHÂN KHUNG -->
+    <iframe class="footer" src="html/footer.html" frameborder="0"></iframe>
+
+    <!-- BLOCK CẬP NHẬT-->
+    <div class="set-scrollbar--x" id="updateInfoDiv__hideBlock">
+      <div id="updateInfoDiv__infomation__hideBlock">
+        <form
+          class="updateInfoDiv__hideBlock__part"
+          id="updateInfoDiv__hideBlock__pic"
+          action=""
+          method=""
+        >
+          <div class="updateInfoDiv__hideBlock__title">
+            <h3>Cập nhật ảnh đại diện</h3>
+            <div
+              id="updateInfoDiv__hideBlock__title--exit"
+              onclick="show_updateInfoDiv()"
+            ><i class="fa-solid fa-xmark"></i></div>
+          </div>
+          <label
+            class="updateInfoDiv__hideBlock__part__input--file"
+            for="c-backgroundPic"
+          >
+            <!-- c = change -->
+            <span>Background</span>
+            <input
+              class="updateInfoInput"
+              type="file"
+              accept="image/png, image/jpeg"
+              id="c-backgroundPic"
+              name="n-backgroundPic"
+            />
+            <!-- n = new -->
+          </label>
+          <label
+            class="updateInfoDiv__hideBlock__part__input--file"
+            for="c-avatar"
+          >
+            <!-- c = change -->
+            <span>Avata</span>
+            <input
+              class="updateInfoInput"
+              type="file"
+              accept="image/png, image/jpeg"
+              id="c-avatar"
+              name="n-avatar"
+            />
+            <!-- n = new -->
+          </label>
+          <div
+            class="updateInfoDiv__hideBlock__part"
+            id="updateInfoDiv__hideBlock__footer"
+          >
+            <button
+              id="updateInfoDiv__hideBlock__footer--cancel"
+              type="button"
+              onclick="cancelUpdate(0)"
+            >ĐẶT LẠI</button>
+            <button
+              id="updateInfoDiv__hideBlock__footer--submit"
+              type="submit"
+            >CẬP NHẬT</button>
+          </div>
+        </form>
+        <form
+          class="updateInfoDiv__hideBlock__part"
+          id="updateInfoDiv__hideBlock__information"
+          action=""
+          method=""
+        >
+          <div class="updateInfoDiv__hideBlock__title">
+            <h3>Cập nhật thông tin cơ bản</h3>
+            <div
+              id="updateInfoDiv__hideBlock__title--exit"
+              onclick="show_updateInfoDiv()"
+            ><i class="fa-solid fa-xmark"></i></div>
+          </div>
+          <label
+            class="updateInfoDiv__hideBlock__part__input--text"
+            for="c-name"
+          >
+            <!-- c = change -->
+            <span>Tên nhóm</span>
+            <input
+              class="updateInfoInput"
+              type="text"
+              id="c-name"
+              name="n-name"
+            />
+            <!-- n = new -->
+          </label>
+          <label
+            class="updateInfoDiv__hideBlock__part__input--date"
+            for="c-date"
+          >
+            <span>Ngày tạo</span>
+            <input
+              class="updateInfoInput"
+              type="date"
+              id="c-date"
+              name="n-date"
+            />
+          </label>
+          <label
+            class="updateInfoDiv__hideBlock__part__input--text"
+            for="c-members"
+          >
+            <span>Số thành viên</span>
+            <input
+              class="updateInfoInput"
+              type="number"
+              id="c-members"
+              name="n-members"
+            />
+          </label>
+          <label
+            class="updateInfoDiv__hideBlock__part__input--text"
+            for="c-monitor"
+          >
+            <span>Chủ hội</span>
+            <input
+              class="updateInfoInput"
+              type="text"
+              id="c-monitor"
+              name="n-monitor"
+            />
+          </label>
+          <label
+            class="updateInfoDiv__hideBlock__part__input--text"
+            for="c-viceMonitor"
+          >
+            <span>Hội phó</span>
+            <input
+              class="updateInfoInput"
+              type="text"
+              id="c-viceMonitor"
+              name="n-viceMonitor"
+            />
+          </label>
+          <div class="updateInfoDiv__hideBlock__title">
+            <h3>Cập nhật thông tin liên hệ</h3>
+          </div>
+          <label
+            class="updateInfoDiv__hideBlock__part__input--text"
+            for="c-email"
+          >
+            <span>Email</span>
+            <input
+              class="updateInfoInput"
+              type="text"
+              id="c-email"
+              name="n-email"
+            />
+          </label>
+          <label
+            class="updateInfoDiv__hideBlock__part__input--text"
+            for="c-facebook"
+          >
+            <span>Facebook</span>
+            <input
+              class="updateInfoInput"
+              type="text"
+              id="c-facebook"
+              name="n-facebook"
+            />
+          </label>
+          <label
+            class="updateInfoDiv__hideBlock__part__input--text"
+            for="c-phone"
+          >
+            <span>SĐT</span>
+            <input
+              class="updateInfoInput"
+              type="text"
+              id="c-phone"
+              name="n-phone"
+            />
+          </label>
+          <div
+            class="updateInfoDiv__hideBlock__part"
+            id="updateInfoDiv__hideBlock__footer"
+          >
+            <button
+              id="updateInfoDiv__hideBlock__footer--cancel"
+              type="button"
+              onclick="cancelUpdate(1)"
+            >ĐẶT LẠI</button>
+            <button
+              id="updateInfoDiv__hideBlock__footer--submit"
+              type="submit"
+            >CẬP NHẬT</button>
+          </div>
+        </form>
+      </div>
+      <div class="sideBar paddingBottom" style="color: rgb(0, 0, 0)"></div>
+    </div>
+    <!-- BLOCK CẬP NHẬT-->
+  </body>
+</html>
