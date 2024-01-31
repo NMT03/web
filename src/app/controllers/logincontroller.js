@@ -12,7 +12,8 @@ class logincontroller {
   async login(req, res, next) {
     let tk = req.body.tk;
     let mk = req.body.mk;
-    res.json("ko");
+    console.log(tk, mk);
+    next();
   }
 
   check_per(req, res, next) {

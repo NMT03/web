@@ -3,7 +3,7 @@
     <div id="loginTableHeading">
       <h1>TÀI KHOẢN</h1>
     </div>
-    <form id="loginTableBody" method="" action="">
+    <form id="loginTableBody" method="post" action="/your-url-here">
       <div class="loginTableBody__part" id="loginTableBodyTop">
         <label for="email" class="loginTableBody__part__element">
           <i class="fa-solid fa-user" style="color: black;"></i>
@@ -34,9 +34,9 @@
   </div>
 </div>
 <script>
-  $(document).ready(function(){ $("#loginForm").submit(function(e){
+  $(document).ready(function(){ $("#loginTableBody").submit(function(e){
   e.preventDefault(); var tk = $("#email").val(); var mk = $("#password").val();
-  $.ajax({ url: "/", type: "POST", data: {tk: tk, mk: mk}, success:
+  $.ajax({ url: "/login", type: "POST", data: {tk: tk, mk: mk}, success:
   function(response){ $('body').html(response); }, error: function(jqXHR,
   textStatus, errorThrown){ console.log(textStatus, errorThrown); } }); }); });
 </script>
