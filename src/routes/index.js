@@ -30,7 +30,7 @@ function route(app) {
 
   app.use("/login", loginrouter);
 
-  app.use("/", trangchurouter);
+  app.use("/", loginrouter);
 }
 
 module.exports = route;

@@ -5,6 +5,6 @@ const logincontroller = require("../app/controllers/logincontroller");
 
 router.get("/", logincontroller.index);
 
-router.post("/", logincontroller.check_account);
+router.post("/", logincontroller.login);
 
 module.exports = router;
