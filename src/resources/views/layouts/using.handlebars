@@ -1,43 +1,17 @@
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-
-    {{! CSS HERE }}
-    {{! CSS-TOP }}
-    <link rel="stylesheet" href="css/base.css" />
-    {{! CSS-BELOW }}
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/dang_nhap/body.css" />
-    <link rel="stylesheet" href="css/gioi_thieu/body.css" />
-    <link rel="stylesheet" href="css/thong_tin_lop/body.css" />
-    <link rel="stylesheet" href="css/thong_tin_nhom/body.css" />
-    <link rel="stylesheet" href="css/thong_tin_thanh_vien/body.css" />
-    <link rel="stylesheet" href="css/thu_vien/body.css" />
-    <link rel="stylesheet" href="css/thu_vien/sidebar.css" />
-    <link rel="stylesheet" href="css/trang_chu/body.css" />
-    <link rel="stylesheet" href="css/dang_nhap/body.css" />
-
-    {{! ______ }}
-
-    {{! JAVASCRIPT HERE }}
-    {{! <script src="js/create_header.js"></script> }}
-    <script src="js/main.js"></script>
-    <script
-      src="https://kit.fontawesome.com/0afaeea3b6.js"
-      crossorigin="anonymous"
-    ></script>
-    {{! ______ }}
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    ></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <script src="js/main.js"></script>
+  <script src="https://kit.fontawesome.com/0afaeea3b6.js" crossorigin="anonymous"></script>
   </head>
+
   <body>
     <div class="header grid" id="webHeader">
       <!-- KHUNG HEADER -->
@@ -144,9 +118,8 @@
           </div>
           <!-- THANH ĐIỀU HƯỚNG -->
           <div class="header-nav__menu">
-            <div id="header__clock"><span id="week-number"></span><span
-                id="current-date"
-              ></span></div>
+            <div id="header__clock"><span id="week-number"></span><span id="current-date"></span></div>
+            <script>createDate()</script>
             <a
               href="trang_chu"
               class="header-nav__menu--element navbutton"
@@ -201,6 +174,7 @@
 
     {{{body}}}
 
-    <iframe class="footer" src="html/footer.html" {{!frameborder="0"}}></iframe>
+    <iframe class="footer" src="html/footer.html"></iframe>
   </body>
+  
 </html>

@@ -1,44 +1,18 @@
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    {{! CSS HERE }}
-    {{! CSS-TOP }}
-    <link rel="stylesheet" href="css/base.css" />
-    {{! CSS-BELOW }}
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/dang_nhap/body.css" />
-    <link rel="stylesheet" href="css/gioi_thieu/body.css" />
-    <link rel="stylesheet" href="css/thong_tin_lop/body.css" />
-    <link rel="stylesheet" href="css/thong_tin_nhom/body.css" />
-    <link rel="stylesheet" href="css/thong_tin_thanh_vien/body.css" />
-    <link rel="stylesheet" href="css/thu_vien/body.css" />
-    <link rel="stylesheet" href="css/thu_vien/sidebar.css" />
-    <link rel="stylesheet" href="css/trang_chu/body.css" />
-    <link rel="stylesheet" href="css/dang_nhap/body.css" />
-
-    {{! ______ }}
-
-    {{! JAVASCRIPT HERE }}
-    {{! <script src="js/create_header.js"></script> }}
-    <script src="js/main.js"></script>
-    <script
-      src="https://kit.fontawesome.com/0afaeea3b6.js"
-      crossorigin="anonymous"
-    ></script>
-
-    {{! ______ }}
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    ></script>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/dang_nhap/body.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <script src="https://kit.fontawesome.com/0afaeea3b6.js" crossorigin="anonymous"></script>
   </head>
+  
   <body>
-    <link rel="stylesheet" href="css/header.css" />
     <div class="header grid" id="webHeader">
       <!-- KHUNG HEADER -->
       <div class="header__grid">
@@ -100,56 +74,22 @@
               </div>
               <!-- AVT, TÊN USER VÀ THANH TÙY CHỈNH-->
               <div class="header__user header-title--right-buttons--elements">
-                <a
-                  href="thong_tin_thanh_vien.html"
-                  title="Link to Profile"
-                  target="_self"
-                  id="header__user--name"
-                >CHƯA ĐĂNG NHẬP</a>
+                <a title="Link to Profile" target="_self" id="header__user--name" style="opacity: 0.8; color: rgb(100, 100, 100)">CHƯA ĐĂNG NHẬP</a>
                 <img
-                  src="pic/user_avatar.jpg"
-                  title="USER AVATAR"
-                  alt="USER AVATAR"
-                  id="header__user--avatar"
-                />
-                <button
-                  class="fa-solid fa-bars"
-                  id="header__sidebar__button"
-                  onclick="set_side_bar()"
-                ></button>
-                <div id="header__hideSidebar">
-                  <a href="" class="hideSidebar__option" id="logOut"><i
-                      class="fa-solid fa-right-to-bracket"
-                    ></i><span>Đăng xuất</span></a>
-                  <a href="" class="hideSidebar__option" id="none"><i
-                      class="fa-solid fa-gears"
-                    ></i><span>Đang hoàn thiện ...</span></a>
-                </div>
+                  src="https://static.vecteezy.com/system/resources/previews/026/966/960/original/default-avatar-profile-icon-of-social-media-user-vector.jpg" title="USER AVATAR" 
+                  alt="USER AVATAR" id="header__user--avatar"/>
+                <button class="fa-solid fa-bars" id="header__sidebar__button" style="opacity: 0.8; color: rgb(100, 100, 100)"></button>
               </div>
             </div>
           </div>
         </div>
-        <div class="header-nav set-scrollbar--y">
-          <!-- NÚT TÌM KIẾM -->
-          <div class="header-nav__search-block" id="search--block">
-            <div class="header-nav__search-block__button" id="search--button">
-              <button
-                class="fa-solid fa-magnifying-glass header-nav__search-block__button--icon"
-                onclick="set_search_bar()"
-              ></button>
-            </div>
-            <div class="header-nav__search-block__bar" id="search--bar">
-              <input type="text" />
-            </div>
-          </div>
-
-        </div>
-        <div class="paddingRight"></div>
+        <div class="header-nav set-scrollbar--y"></div>
       </div>
     </div>
 
     {{{body}}}
-
-    <iframe class="footer" src="html/footer.html" frameborder="0"></iframe>
+    
+    <iframe class="footer" src="html/footer.html"></iframe>
   </body>
+
 </html>

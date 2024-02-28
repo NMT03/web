@@ -1,24 +1,3 @@
-var width =
-  window.innerWidth ||
-  document.documentElement.clientWidth ||
-  document.body.clientWidth;
-var height =
-  window.innerHeight ||
-  document.documentElement.clientHeight ||
-  document.body.clientHeight;
-
-window.onresize = function x() {
-  width =
-    window.innerWidth ||
-    document.documentElement.clientWidth ||
-    document.body.clientWidth;
-  height =
-    window.innerHeight ||
-    document.documentElement.clientHeight ||
-    document.body.clientHeight;
-};
-console.log("HELLO WWW: width ", width, " height", height);
-
 // CLICK -> SUMMON SIDE BAR
 function set_side_bar() {
   let sidebar = document.getElementById("header__hideSidebar");
@@ -138,28 +117,3 @@ function createDate() {
     addYearElement[i].textContent = year;
   }
 }
-
-// Gọi hàm addHeader khi trang web được tải
-window.onload = function () {
-  //   addHeader();
-  createDate();
-  // let links = [
-  //     "css/base.css",
-  //     "css/header.css",
-  //     "css/dang_nhap/body.css",
-  //     "css/gioi_thieu/body.css",
-  //     "css/thong_tin_lop/body.css",
-  //     "css/thong_tin_nhom/body.css",
-  //     "css/thong_tin_thanh_vien/body.css",
-  //     "css/thu_vien/body.css",
-  //     "css/thu_vien/sidebar.css",
-  //     "css/trang_chu/body.css"
-  // ];
-
-  // for (let i = 0; i < links.length; i++) {
-  //     let link = document.createElement('link');
-  //     link.rel = 'stylesheet';
-  //     link.href = links[i];
-  //     document.head.appendChild(link);
-  // }
-};
