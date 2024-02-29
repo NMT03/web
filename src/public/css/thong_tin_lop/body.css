@@ -4,8 +4,6 @@
     top: 0;
     bottom: 0;
     width: 75%;
-    height: 100vh;
-    min-height: max-content;
 
     margin-left: 3vw;
     background-color: rgb(240, 240, 240);
@@ -158,69 +156,10 @@
 
         margin-top: 2%;
 
-        background-image: linear-gradient(45deg, rgb(242, 254, 255), rgb(182, 246, 255));
+        background-image: linear-gradient(45deg, rgb(201, 251, 255), rgb(255, 233, 182));
     }
 
     /* LEFT */
-        #body-center2__header__pics{
-            position: relative;
-            width: 40%;
-            height: 100%;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            background-color: transparent;
-        }
-
-        #body-center2__header__pics #background{
-            position: relative;
-            width: 95%;
-            height: max-content;
-
-            object-fit: cover;
-        }
-
-        #body-center2__header__pics #pictures--avatar{
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 8vw;
-            height: 8vw;
-
-            background-color: aqua;
-            border-radius: 50%;
-        }
-
-        #body-center2__header__pics__className{
-            color: rgb(37, 37, 37);
-            padding: 1% 0;
-            font-size: calc(var(--myfontsize)/1.2);
-        }
-
-        #avatar{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-
-            border: 0.25vw solid rgb(37, 37, 37);
-            object-fit: cover;
-        }
-
-        @media screen and (max-width: 310px){
-            #avatar{
-                border: 0.775px solid rgb(37, 37, 37);
-            }
-        }
-
-        @media screen and (min-width: 1400px){
-            #avatar{
-                border: 3.5px solid rgb(37, 37, 37);
-            }
-        }
-
     /* RIGHT */
         #body-center2__header__rightSide{
             position: relative;
@@ -297,6 +236,7 @@
         .body-center2__header__rightSide__element__list__element__title{
             width: 100%;
             font-size: 1.1em;
+            font-weight: bold;
 
             border-bottom: 0.1vw solid rgb(37, 37, 37);
         }
@@ -346,95 +286,28 @@
     }
 
     /* BODY */
-    .body-center2__bodyTable__body{
-        width: 100%;
-        height: max-content;
-
-        display: flex;
-        flex-direction: column;
-
-        background-image:   linear-gradient(0deg, rgb(246, 254, 255), rgb(199, 234, 255));
-    }
 
     /* DANH SACH */
         /* HỌC SINH */
-        #body-center2__DSHS{
-            display: flex;
-            flex-direction: column;
-
-            font-size: var(--myfontsize);
-        }
-
-        .body-center2__DSHS__element{
-            display: grid;
+        #body-center2__DSHS .Acontent__gridTable__element__part{
             grid-template-columns: 25% 15% 20% 15% 10% 15%;
-
-            font-size: 0.5em;
-
-            border-right: 0.2vw solid gray;
         }
 
-        .DSHS__head{
-            background-color: rgb(80, 80, 80);
-            color: white;
-        }
 
-        .body-center2__DSHS__element p{
-            border-left: 0.2vw solid gray;
-            border-bottom: 0.1vw solid gray;
-
-            padding: 1% 0;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* THI ĐƯA */
+        /* THI ĐUA */
         #body-center2__DSTD{
-            display: flex;
-            flex-direction: column;
-
-            font-size: var(--myfontsize);
+            display: none;
         }
-
-        .body-center2__DSTD__element{
-            display: grid;
+        
+        #body-center2__DSTD .Acontent__gridTable__element__part{
             grid-template-columns: 20% 20% 25% 35%;
-
-            font-size: 0.5em;
-
-            border-right: 0.2vw solid gray;
         }
 
-        .DSTD__head{
-            background-color: rgb(80, 80, 80);
-            color: white;
-        }
-
-        .body-center2__DSTD__element p{
-            border-left: 0.2vw solid gray;
-            border-bottom: 0.1vw solid gray;
-
-            padding: 1% 0;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            transition: font-size 0.3s, color 0.3s;
-        }
-
-        .DS__link{
-            color: inherit;
-        }
-
-        .DS__link:hover{
-            cursor: pointer;
-            color: rgb(67, 173, 255);
-            font-size: 1.05em;
-        }
-
-        .DS__link:active{
-            transform: scale(0.95);
+        /* UPDATE LATER */
+        #body-center2__UPDATELATER{
+            display: none;
+            font-size: calc(var(--myfontsize)/2);
+            color: rgb(0, 0, 0);
+            background-color: white;
+            margin-left: 1%;
         }

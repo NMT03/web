@@ -1,0 +1,100 @@
+.bc7{
+    background-color: rgb(255, 255, 255);
+}
+
+#bc7__center{
+    width: 100vw;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: transparent;
+}
+
+#bc7__center__header1{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 0.5%;
+
+    font-size: var(--myfontsize);
+}
+
+    #bc7__center__h1__time{
+        position: fixed;
+        width: 40%;
+
+        display: flex;
+        margin-top: 1%;
+
+        font-size: 0.5em;
+    }
+
+    #bc7__center__h1__time p{
+        background-color: rgb(37, 37, 37);
+        padding: 0.1vw 0.2vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 0.5vw;
+    }
+
+    #bc7__center__h1__time p span{
+        margin-left: 0.2vw;
+    }
+
+    #bc7__center__h1__time__year{
+        width: 70%;
+    }
+
+    #bc7__center__h1__time__week{
+        width: 30%;
+
+        margin-left: 2%;
+    }
+
+    #bc7__center__h1__updateBtn{
+        position: fixed;
+        right: 10%;
+        width: 8%;
+
+        margin-left: 5%;
+        margin-top: 1%;
+
+        font-size: 0.5em;
+    }
+
+    #bc7__center__h1__updateBtn p{
+        background-color: rgb(21, 255, 0);
+        color: rgb(255, 255, 255);
+
+        padding: 0.1vw 0.2vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-wrap: nowrap;
+        border-radius: 0.25vw;
+
+        transition: transform 0.3s, opacity 0.3s;
+    }
+
+    #bc7__center__h1__updateBtn p:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+
+        opacity: 0.8;
+    }
+
+    #bc7__center__h1__updateBtn p:active{
+        transform: scale(0.95);
+    }

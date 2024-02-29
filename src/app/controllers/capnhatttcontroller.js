@@ -6,7 +6,7 @@ class capnhatttController {
     let token = req.cookies.token_;
     // let user_infor = jwt.verify(token, "03");
     res.render("capnhattt", {
-      layout: "using",
+      layout: "blank",
       // status: user_infor.name,
     });
   }
