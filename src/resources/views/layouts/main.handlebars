@@ -1,0 +1,96 @@
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/dang_nhap/body.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <script src="https://kit.fontawesome.com/0afaeea3b6.js" crossorigin="anonymous"></script>
+  </head>
+  
+  <body>
+    <div class="header grid" id="webHeader">
+      <!-- KHUNG HEADER -->
+      <div class="header__grid">
+        <!-- PHẦN CHÍNH CỦA HEADER -->
+        <div class="header-title">
+          <!-- BÊN TRÁI HEADER -->
+          <div class="header-title--left header-title--elements">
+            <div class="header-title--left-icon">
+              <div class="header-title--left-icon--block">
+                <img src="./pic/school_icon.jpg" alt="school" />
+              </div>
+            </div>
+            <div class="header-title--left-sub">
+              <div class="header-title--left-sub--block">
+                <p>HVN-EDUCATION</p>
+                <i class="fa-solid fa-school"></i>
+              </div>
+            </div>
+          </div>
+          <!-- GIỮA HEADER -->
+          <div class="header-title--center header-title--elements">
+            <div class="header-title--center-title">
+              <div class="header-title--center-title--block">
+                <img src="pic/HVN_icon.jpg" />
+                <p>THPT HUỲNH VĂN NGHỆ</p>
+              </div>
+            </div>
+          </div>
+          <!-- PHẢI HEADER -->
+          <div class="header-title--right header-title--elements">
+            <!-- CÁC NÚT -->
+            <div class="header-title--right-buttons">
+              <!-- NÚT LIÊN KẾT FACEBOOK VÀ QRCODE -->
+              <div
+                class="header-title--right-buttons-menu header-title--right-buttons--elements"
+              >
+                <a
+                  class="header-title--right-buttons-menu--icon fa-brands fa-facebook"
+                ><p class="h-m-p">facebook</p></a>
+                <div class="header-title--right-buttons-menu--show">
+                  <ul>
+                    <a
+                      class="header-title--right-buttons-menu--show-elements"
+                      title="Link to Facebook HVN"
+                      href="https://www.facebook.com/profile.php?id=100028020954560&mibextid=ZbWKwL"
+                      target="_blank"
+                    >
+                      <img
+                        class="header-title--right-buttons-menu--show-elements--qrc"
+                        alt="QR Code"
+                        src="./pic/QRCode.jpg"
+                      />
+                      <i
+                        class="header-title--right-buttons-menu--show-elements--fbi fa-brands fa-facebook fa-fade"
+                      > Facebook</i>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+              <!-- AVT, TÊN USER VÀ THANH TÙY CHỈNH-->
+              <div class="header__user header-title--right-buttons--elements">
+                <a title="Link to Profile" target="_self" id="header__user--name" style="opacity: 0.8; color: rgb(100, 100, 100)">CHƯA ĐĂNG NHẬP</a>
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/026/966/960/original/default-avatar-profile-icon-of-social-media-user-vector.jpg" title="USER AVATAR" 
+                  alt="USER AVATAR" id="header__user--avatar"/>
+                <button class="fa-solid fa-bars" id="header__sidebar__button" style="opacity: 0.8; color: rgb(100, 100, 100)"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-nav set-scrollbar--y"></div>
+      </div>
+      <h1 id = "webNote"; style = "position: fixed; left: 0; bottom: 0; background-color:rgb(37, 37, 37); z-index: 1; color: white; padding: 0.25% 1%; border-radius: 0 0.5vw 0.5vw 0;font-size: calc(var(--myfontsize)/3.5)">Đây chỉ là mô hình, dữ liệu chỉ là mô phỏng.</h1>
+    </div>
+
+    {{{body}}}
+    
+    <iframe class="footer" src="html/footer.html"></iframe>
+  </body>
+
+</html>
