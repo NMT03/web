@@ -1,0 +1,109 @@
+.body-center0{
+    position: relative;
+    left: 20%;
+    top: 0;
+    bottom: 0;
+    width: 80%;
+}
+
+/* LIST RANK */
+
+.Acontent__sidebar__element__content__element{
+    display: grid;
+    grid-template-columns: 12% auto;
+}
+
+.Acontent__sidebar__element__content__element + .Acontent__sidebar__element__content__element{
+    margin-top: 2%;
+}
+
+/* CENTER */
+.body-center0__content{
+    display: flex;
+    flex-direction: column;
+
+    margin: 2%;
+    margin-right: 5%;
+    color: black;
+    font-size: 1em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1.5vw;
+}
+
+.body-center0__content ul.a{
+    padding-bottom: 2%;
+    padding-left: 5%;
+
+    background-color: rgb(255, 230, 179);
+    border-radius: 1.5vw;
+}
+
+.body-center0__content ul.p{
+    padding-bottom: 2%;
+    padding-left: 5%;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 1.5vw;
+}
+
+.body-center0__content--a_element{
+    display: flex;
+
+    background-color: rgb(255, 244, 194);
+    border: 0.1vw solid rgb(255, 231, 164);
+    color: rgb(37, 37, 37);
+    padding: 1.5% 5%;
+    margin-right: 5%;
+}
+
+.body-center0__content--a_element:hover{
+    background-color: rgb(37, 37, 37);
+    color: rgb(255, 255, 255);    
+}
+
+.body-center0__content--p_element{
+    background-color: rgb(243, 243, 243);
+    color: rgb(37, 37, 37);
+    padding: 1% 5%;
+    margin-right: 5%;
+}
+
+.body-center0__content--listblock{
+    border: 0.2vw solid rgb(56, 56, 56);
+}
+
+.body0-Acontent__table__header__changeTypeBtn{
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.body0-Acontent__table__header__changeTypeBtn:hover{
+    cursor: pointer;
+    opacity: 0.7;
+
+    transform: scale(1.1);
+}
+
+.body0-Acontent__table__header__changeTypeBtn:active{
+    cursor: pointer;
+    opacity: 0.7;
+
+    transform: scale(0.9);
+}
+
+#body0-Acontent__table__contentList--type0 .Acontent__table__contentList__element{
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+}
+
+#body0-Acontent__table__contentList--type1 .Acontent__table__contentList__element{
+    display: grid;
+    grid-template-columns: 10% 25% 65%;
+}
+
+#body0-Acontent__table__contentList--type0{
+    display: block;
+}
+
+#body0-Acontent__table__contentList--type1{
+    display: none;
+}
