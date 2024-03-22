@@ -36,7 +36,10 @@ app.use(bodyParser.json());
 // // route(app);
 
 // Khởi động ứng dụng trên port đã khai báo
-app.listen(port);
+app.listen(port, function() {
+    console.log(`Server đang chạy tại địa chỉ: http://localhost:${port}`);
+});
+
 const route = (url='/', lout='using', hbar=url.slice(1)) =>{
     console.log(hbar);
     app.get(url, (req, res) => {
@@ -44,9 +47,9 @@ const route = (url='/', lout='using', hbar=url.slice(1)) =>{
             layout: `${lout}`
         })
     });
-}
+};
 
-route("/", "main", "login")
+route("/", "main", "login");
 route("/login", "main");
 route("/trang_chu", "using");
 route("/thanh_vien", "using");
