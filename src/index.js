@@ -1,34 +1,42 @@
-const express = require("express");
-const morgan = require("morgan"); //Thư viện MORGAN giúp thể hiện các req, res
-const handlebars = require("express-handlebars");//Thư viện template HANDLEBARS
-const exp = require("constants");
-const path = require("path");
-// const route = require("./routes");
-const bodyParser = require("body-parser");
-const { log } = require("console");
-var cookieParser = require("cookie-parser");
+const express = require("express"); // Sử dụng framework Express.js cho server-side development
+const morgan = require("morgan"); // Sử dụng thư viện Morgan để ghi log các request và response
+const handlebars = require("express-handlebars"); // Sử dụng thư viện handlebars để render template HTML
+const path = require("path"); // Sử dụng module 'path' để thao tác với đường dẫn file
+const bodyParser = require("body-parser"); // Sử dụng middleware bodyParser để parse dữ liệu từ body request
+const cookieParser = require("cookie-parser"); // Sử dụng middleware cookieParser để parse cookie từ request
 
 
 const app = express();
 const port = 3000;
 
+// Sử dụng middleware cookieParser để xử lý cookie
 app.use(cookieParser());
+
+// Sử dụng middleware express.static để phục vụ file tĩnh từ thư mục "public"
 app.use(express.static(path.join(__dirname, "public")));
 
+// Sử dụng middleware morgan để ghi log truy cập HTTP theo định dạng "combined"
+app.use(morgan("combined"));
 
-app.use(morgan("combined")); //Thiết lập thư viện morgan vào web
-app.engine("handlebars", handlebars.engine()); //Thiết lập engine handlebars
-app.set("view engine", "handlebars"); //Thiết lập view engine handlebars
-app.set("views", path.join(__dirname, "resources\\views")); //Chỉnh sửa cấu hình đường dẫn
+// Cấu hình Handlebars:
+// - Đăng ký engine Handlebars với tên "handlebars"
+app.engine("handlebars", handlebars.engine());
+// - Thiết lập Handlebars là view engine mặc định
+app.set("view engine", "handlebars");
+// - Thiết lập thư mục mặc định cho template Handlebars
+app.set("views", path.join(__dirname, "resources\\views"));
 
-// Phân tích cú pháp cho dữ liệu application/x-www-form-urlencoded
+// Sử dụng middleware bodyParser để xử lý dữ liệu POST:
+// - Xử lý dữ liệu POST dạng "application/x-www-form-urlencoded"
 app.use(bodyParser.urlencoded({ extended: true }));
-// Phân tích cú pháp cho dữ liệu application/json
+// - Xử lý dữ liệu POST dạng "application/json"
 app.use(bodyParser.json());
-// route(app);
-app.listen(port);
-console.log(port);
 
+// Khai báo các route cho ứng dụng (được bình luận)
+// // route(app);
+
+// Khởi động ứng dụng trên port đã khai báo
+app.listen(port);
 const route = (url='/', lout='using', hbar=url.slice(1)) =>{
     console.log(hbar);
     app.get(url, (req, res) => {
