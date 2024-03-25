@@ -1,191 +1,131 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    ></script>
 
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <script src="js/main.js"></script>
-    <script
-      src="https://kit.fontawesome.com/0afaeea3b6.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <body>
-    <div class="header grid" id="webHeader">
-      <!-- KHUNG HEADER -->
-      <div class="header__grid">
-        <!-- PHẦN CHÍNH CỦA HEADER -->
-        <div class="header-title">
-          <!-- BÊN TRÁI HEADER -->
-          <div class="header-title--left header-title--elements">
-            <div class="header-title--left-icon">
-              <div class="header-title--left-icon--block">
-                <img src="pic/school_icon.jpg" alt="school" />
-              </div>
-            </div>
-            <div class="header-title--left-sub">
-              <div class="header-title--left-sub--block">
-                <p>HVN-EDUCATION</p>
-                <i class="fa-solid fa-school"></i>
-              </div>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <script src="js/main.js"></script>
+  <script src="https://kit.fontawesome.com/0afaeea3b6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="header grid" id="webHeader">
+    <!-- KHUNG HEADER -->
+    <div class="header__grid">
+      <!-- PHẦN CHÍNH CỦA HEADER -->
+      <div class="header-title">
+        <!-- BÊN TRÁI HEADER -->
+        <div class="header-title--left header-title--elements">
+          <div class="header-title--left-icon">
+            <div class="header-title--left-icon--block">
+              <img src="pic/school_icon.jpg" alt="school" />
             </div>
           </div>
-          <!-- GIỮA HEADER -->
-          <div class="header-title--center header-title--elements">
-            <div class="header-title--center-title">
-              <div class="header-title--center-title--block">
-                <img src="pic/HVN_icon.jpg" />
-                <p>THPT HUỲNH VĂN NGHỆ</p>
-              </div>
+          <div class="header-title--left-sub">
+            <div class="header-title--left-sub--block">
+              <p>HVN-EDUCATION</p>
+              <i class="fa-solid fa-school"></i>
             </div>
           </div>
-          <!-- PHẢI HEADER -->
-          <div class="header-title--right header-title--elements">
-            <!-- CÁC NÚT -->
-            <div class="header-title--right-buttons">
-              <!-- NÚT LIÊN KẾT FACEBOOK VÀ QRCODE -->
-              <div
-                class="header-title--right-buttons-menu header-title--right-buttons--elements"
-              >
-                <a
-                  class="header-title--right-buttons-menu--icon fa-brands fa-facebook"
-                ><p class="h-m-p">facebook</p></a>
-                <div class="header-title--right-buttons-menu--show">
-                  <ul>
-                    <a
-                      class="header-title--right-buttons-menu--show-elements"
-                      title="Link to Facebook HVN"
-                      href="https://www.facebook.com/profile.php?id=100028020954560&mibextid=ZbWKwL"
-                      target="_blank"
-                    >
-                      <img
-                        class="header-title--right-buttons-menu--show-elements--qrc"
-                        alt="QR Code"
-                        src="./pic/QRCode.jpg"
-                      />
-                      <i
-                        class="header-title--right-buttons-menu--show-elements--fbi fa-brands fa-facebook fa-fade"
-                      > Facebook</i>
-                    </a>
-                  </ul>
-                </div>
+        </div>
+        <!-- GIỮA HEADER -->
+        <div class="header-title--center header-title--elements">
+          <div class="header-title--center-title">
+            <div class="header-title--center-title--block">
+              <img src="pic/HVN_icon.jpg" />
+              <p>THPT HUỲNH VĂN NGHỆ</p>
+            </div>
+          </div>
+        </div>
+        <!-- PHẢI HEADER -->
+        <div class="header-title--right header-title--elements">
+          <!-- CÁC NÚT -->
+          <div class="header-title--right-buttons">
+            <!-- NÚT LIÊN KẾT FACEBOOK VÀ QRCODE -->
+            <div class="header-title--right-buttons-menu header-title--right-buttons--elements">
+              <a class="header-title--right-buttons-menu--icon fa-brands fa-facebook">
+                <p class="h-m-p">facebook</p>
+              </a>
+              <div class="header-title--right-buttons-menu--show">
+                <ul>
+                  <a class="header-title--right-buttons-menu--show-elements" title="Link to Facebook HVN"
+                    href="https://www.facebook.com/profile.php?id=100028020954560&mibextid=ZbWKwL" target="_blank">
+                    <img class="header-title--right-buttons-menu--show-elements--qrc" alt="QR Code"
+                      src="./pic/QRCode.jpg" />
+                    <i class="header-title--right-buttons-menu--show-elements--fbi fa-brands fa-facebook fa-fade">
+                      Facebook</i>
+                  </a>
+                </ul>
               </div>
-              <!-- AVT, TÊN USER VÀ THANH TÙY CHỈNH-->
-              <div class="header__user header-title--right-buttons--elements">
-                <a
-                  href="thanh_vien"
-                  title="Link to Profile"
-                  target="_self"
-                  id="header__user--name"
-                >USER NAME</a>
-                <img
-                  src="pic/user_avatar.jpg"
-                  title="USER AVATAR"
-                  alt="USER AVATAR"
-                  id="header__user--avatar"
-                />
-                <button
-                  class="fa-solid fa-bars"
-                  id="header__sidebar__button"
-                  onclick="set_side_bar()"
-                ></button>
-                <div id="header__hideSidebar">
-                  <a href="" class="hideSidebar__option" id="logOut"><i
-                      class="fa-solid fa-right-to-bracket"
-                    ></i><span>Đăng xuất</span></a>
-                  <a href="" class="hideSidebar__option" id="none"><i
-                      class="fa-solid fa-gears"
-                    ></i><span>Đang hoàn thiện ...</span></a>
+            </div>
+            <!-- AVT, TÊN USER VÀ THANH TÙY CHỈNH-->
+            <div class="header__user header-title--right-buttons--elements">
+              <a href="thanh_vien" title="Link to Profile" target="_self" id="header__user--name">USER NAME</a>
+              <img src="pic/user_avatar.jpg" title="USER AVATAR" alt="USER AVATAR" id="header__user--avatar" />
+              <button class="fa-solid fa-bars" id="header__sidebar__button" onclick="set_side_bar()"></button>
+              <div id="header__hideSidebar">
+                <a href="" class="hideSidebar__option" id="logOut"><i class="fa-solid fa-right-to-bracket"></i><span>Đăng xuất</span></a>
+                <div href="" class="hideSidebar__option" id="utilities">
+                  <div id="utilities__title"><p><i class="fa-solid fa-star"></i><span>Tiện ích</span></p><i style="font-size: 0.7em;" class="fa-solid fa-angle-down"></i></div>
+                  <div id="utilities__element">
+                      <a href="" class="hideSidebar__option" id=""><i class="fa-solid fa-right-to-bracket"></i><span>Đăng xuất</span></a>
+                      <a href="" class="hideSidebar__option" id=""><i class="fa-solid fa-right-to-bracket"></i><span>Đăng xuất</span></a>
+                      <a href="" class="hideSidebar__option" id=""><i class="fa-solid fa-right-to-bracket"></i><span>Đăng xuất</span></a>
+                      <a href="" class="hideSidebar__option" id=""><i class="fa-solid fa-right-to-bracket"></i><span>Đăng xuất</span></a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="header-nav set-scrollbar--y">
-          <!-- NÚT TÌM KIẾM -->
-          <div class="header-nav__search-block" id="search--block">
-            <div class="header-nav__search-block__button" id="search--button">
-              <button
-                class="fa-solid fa-magnifying-glass header-nav__search-block__button--icon"
-                onclick="set_search_bar()"
-              ></button>
-            </div>
-            <div class="header-nav__search-block__bar" id="search--bar">
-              <input type="text" />
-            </div>
-          </div>
-          <!-- THANH ĐIỀU HƯỚNG -->
-          <div class="header-nav__menu">
-            <div id="header__clock"><span id="week-number"></span><span
-                id="current-date"
-              ></span></div>
-            <script>createDate()</script>
-            <a
-              href="trang_chu"
-              class="header-nav__menu--element navbutton"
-              id="page0"
-            >TRANG CHỦ</a>
-            <a
-              href="thanh_vien"
-              class="header-nav__menu--element navbutton"
-              id="page1"
-            >THÀNH VIÊN</a>
-            <a
-              href="lop"
-              class="header-nav__menu--element navbutton"
-              id="page2"
-            >LỚP</a>
-            <a
-              href="nhom"
-              class="header-nav__menu--element navbutton"
-              id="page3"
-            >NHÓM</a>
-            <a
-              href="thu_vien"
-              class="header-nav__menu--element navbutton"
-              id="page4"
-            >THƯ VIỆN</a>
-            <a
-              href="gioi_thieu"
-              class="header-nav__menu--element navbutton"
-              id="page5"
-            >GIỚI THIỆU</a>
-            <a
-              href="cap_nhat"
-              class="header-nav__menu--element navbutton"
-              id="page6"
-              target="_blank"
-            >CẬP NHẬT THÔNG TIN</a>
-            <a
-              href="thi_dua"
-              class="header-nav__menu--element navbutton"
-              id="page7"
-            >THI ĐUA</a>
-            <a
-              href="login"
-              class="header-nav__menu--element navbutton"
-            >ĐĂNG NHẬP-TEST</a>
-            <a target="_blank" href="https://stealth-leo-c2e.notion.site/M-T-S-N-PH-M-D-N-SCHOOL-WEB-532aa687a4ca4a7fb94f0f37424c9085?pvs=4" class="header-nav__menu--element navbutton">LINK MÔ TẢ SẢN PHẨM</a>                        
-          </div>
-        </div>
-        <div class="paddingRight"></div>
       </div>
-      <h1 id = "webNote"; style = "position: fixed; left: 0; bottom: 0; background-color:rgb(37, 37, 37); z-index: 1; color: white; padding: 0.25% 1%; border-radius: 0 0.5vw 0 0;font-size: calc(var(--myfontsize)/3)">Đây chỉ là mô hình, dữ liệu chỉ là mô phỏng. <a style="color:yellow;font-size:0.7em" target="_blank" href="https://stealth-leo-c2e.notion.site/M-T-S-N-PH-M-D-N-SCHOOL-WEB-532aa687a4ca4a7fb94f0f37424c9085?pvs=4"><i>link to workspace here</i></a></h1>
+      <div class="header-nav set-scrollbar--y">
+        <!-- NÚT TÌM KIẾM -->
+        <div class="header-nav__search-block" id="search--block">
+          <div class="header-nav__search-block__button" id="search--button">
+            <button class="fa-solid fa-magnifying-glass header-nav__search-block__button--icon"
+              onclick="set_search_bar()"></button>
+          </div>
+          <div class="header-nav__search-block__bar" id="search--bar">
+            <input type="text" />
+          </div>
+        </div>
+        <!-- THANH ĐIỀU HƯỚNG -->
+        <div class="header-nav__menu">
+          <div id="header__clock"><span id="week-number"></span><span id="current-date"></span></div>
+          <script>createDate()</script>
+          <a href="trang_chu" class="header-nav__menu--element navbutton" id="page0">TRANG CHỦ</a>
+          <a href="thanh_vien" class="header-nav__menu--element navbutton" id="page1">THÀNH VIÊN</a>
+          <a href="lop" class="header-nav__menu--element navbutton" id="page2">LỚP</a>
+          <a href="nhom" class="header-nav__menu--element navbutton" id="page3">NHÓM</a>
+          <a href="thu_vien" class="header-nav__menu--element navbutton" id="page4">THƯ VIỆN</a>
+          <a href="gioi_thieu" class="header-nav__menu--element navbutton" id="page5">GIỚI THIỆU</a>
+          <a href="cap_nhat" class="header-nav__menu--element navbutton" id="page6" target="_blank">CẬP NHẬT THÔNG
+            TIN</a>
+          <a href="thi_dua" class="header-nav__menu--element navbutton" id="page7">THI ĐUA</a>
+          <a href="login" class="header-nav__menu--element navbutton">ĐĂNG NHẬP-TEST</a>
+          <a target="_blank"
+            href="https://stealth-leo-c2e.notion.site/M-T-S-N-PH-M-D-N-SCHOOL-WEB-532aa687a4ca4a7fb94f0f37424c9085?pvs=4"
+            class="header-nav__menu--element navbutton">LINK MÔ TẢ SẢN PHẨM</a>
+        </div>
+      </div>
+      <div class="paddingRight"></div>
     </div>
+    <h1 id="webNote" ;
+      style="position: fixed; left: 0; bottom: 0; background-color:rgb(37, 37, 37); z-index: 1; color: white; padding: 0.25% 1%; border-radius: 0 0.5vw 0 0;font-size: calc(var(--myfontsize)/3)">
+      Đây chỉ là mô hình, dữ liệu chỉ là mô phỏng. <a style="color:yellow;font-size:0.7em" target="_blank"
+        href="https://stealth-leo-c2e.notion.site/M-T-S-N-PH-M-D-N-SCHOOL-WEB-532aa687a4ca4a7fb94f0f37424c9085?pvs=4"><i>link
+          to workspace here</i></a></h1>
+  </div>
 
-    {{{body}}}
+  {{{body}}}
 
-    <iframe class="footer" src="html/footer.html"></iframe>
-  </body>
+  <iframe class="footer" src="html/footer.html"></iframe>
+</body>
 
 </html>

@@ -8,6 +8,7 @@ const DBrouter = require("./DB");
 const gtrouter = require("./gioithieu");
 const capnhatrouter = require("./cap_nhat");
 const thiduarouter = require("./thi_dua");
+const tailieurouter = require("./tai_lieu");
 
 function route(app) {
   app.use("/trang_chu", trangchurouter);
@@ -19,6 +20,8 @@ function route(app) {
   app.use("/nhom", nhomrouter);
 
   app.use("/thu_vien", thuvienrouter);
+
+  app.use("/tai_lieu", tailieurouter);
 
   app.use("/gioi_thieu", gtrouter);
 

@@ -126,8 +126,17 @@ const searchRoot = document.getElementById("searchResult");
 
 const navPage = document.getElementsByClassName("bc6__nav__element")
 
+const sideBar = document.getElementById("bc6__body__sidebar");
+const setSideBarBtn = document.getElementById("hiddenSearchBar")
+setSideBarBtn.addEventListener("click", () => renderSideBar());
+
+const btnMountInteract = document.getElementById("interact__mout")
+btnMountInteract.addEventListener("click", () => mountInteract());
+const blockTypeInteract = document.getElementById("interact__listTypes")
+
 // Biến
 let currentPageId = "members";
+let currentTypeUpdate = "addFormType";
 let currentPage = document.getElementById(currentPageId);
 let currentBase = pages[currentPageId];
 let currentElementChosed = null
@@ -147,6 +156,8 @@ function handlePageChange(elementClicked){
     currentBase = pages[currentPageId];
     searchInput.value = "";
     searchRoot.innerHTML = "";
+
+    setPageInteract(currentTypeUpdate)
 }
 
 function handleInput(inputValue){
@@ -167,8 +178,8 @@ function renderResult(base){
         const paragraph = document.createElement("p");
         listItem.className = "search__result";
         listItem.id = id;
+        paragraph.innerText = `ID: ${id}`
         anchor.innerText = name;
-        paragraph.innerText = "ID: "+id;
         listItem.appendChild(anchor);
         listItem.appendChild(paragraph);
 
@@ -176,5 +187,52 @@ function renderResult(base){
     });
 }
 
+function renderSideBar(){
+    if(sideBar.style.animation != "0.5s ease-in-out 0s 1 normal forwards running sideBarHide"){
+        sideBar.style.animation = "sideBarHide 0.5s ease-in-out"
+        sideBar.style.animationFillMode = "forwards"
+        setSideBarBtn.style.animation = "rotate180deg 0.5s ease-in-out"
+        setSideBarBtn.style.animationFillMode = "forwards"
+    } else {
+        sideBar.style.animation = "sideBarShow 0.5s ease-in-out"
+        sideBar.style.animationFillMode = "forwards"
+        setSideBarBtn.style.animation = "rotate-180deg 0.5s ease-in-out"
+        setSideBarBtn.style.animationFillMode = "forwards"
+    }
+
+}   
+
+function mountInteract(){
+    console.log(blockTypeInteract.style.animationName)
+    if(blockTypeInteract.style.animationName != "unmoutInteract"){
+        blockTypeInteract.style.animation = "unmoutInteract 0.5s ease-in-out forwards"
+        btnMountInteract.style.animation = "rotateInteractMount1 0.5s forwards ease-in-out"
+    }else{
+        blockTypeInteract.style.animation = "mountInteract 0.5s ease-in-out forwards"
+        btnMountInteract.style.animation = "rotateInteractMount2 0.5s forwards ease-in-out"
+    }
+}
+
+const setPageInteract = (classPage) => {
+    let forms = document.getElementsByClassName(classPage);
+    [...forms].forEach(form => {
+        if (form.id.includes(currentPageId)) {
+            form.style.display = "flex";
+        }else{
+            form.style.display = "none";
+        }
+    });
+}      
+
+setPageInteract(currentTypeUpdate)
+
+const interactGuis = document.getElementsByClassName("interact__form")
+const setInteractGui = (idGui, typeUpdate) => {
+    [...interactGuis].forEach(gui => {
+        gui.style.display=(gui.id==idGui)? "block":"none";
+        currentTypeUpdate = typeUpdate;
+    });
+    setPageInteract(currentTypeUpdate)
+}             
 
 // MAI THẾ HÀO - Frontend + Logic + WriteJS + Idea; NGUYỄN MINH TRÍ - Backend + Algorithm + Data + Idea
