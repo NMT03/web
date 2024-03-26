@@ -117,5 +117,3 @@ function createDate() {
     addYearElement[i].textContent = year;
   }
 }
-
-createDate()
