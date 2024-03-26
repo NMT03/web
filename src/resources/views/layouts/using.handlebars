@@ -14,6 +14,8 @@
 </head>
 
 <body>
+  <!-- KHỞI TẠO HEADER -->
+  <link rel="stylesheet" href="css/header.css">
   <div class="header grid" id="webHeader">
     <!-- KHUNG HEADER -->
     <div class="header__grid">
@@ -23,7 +25,7 @@
         <div class="header-title--left header-title--elements">
           <div class="header-title--left-icon">
             <div class="header-title--left-icon--block">
-              <img src="pic/school_icon.jpg" alt="school" />
+              <img src="./pic/school_icon.jpg" alt="school">
             </div>
           </div>
           <div class="header-title--left-sub">
@@ -37,7 +39,7 @@
         <div class="header-title--center header-title--elements">
           <div class="header-title--center-title">
             <div class="header-title--center-title--block">
-              <img src="pic/HVN_icon.jpg" />
+              <img src=pic/HVN_icon.jpg>
               <p>THPT HUỲNH VĂN NGHỆ</p>
             </div>
           </div>
@@ -56,7 +58,7 @@
                   <a class="header-title--right-buttons-menu--show-elements" title="Link to Facebook HVN"
                     href="https://www.facebook.com/profile.php?id=100028020954560&mibextid=ZbWKwL" target="_blank">
                     <img class="header-title--right-buttons-menu--show-elements--qrc" alt="QR Code"
-                      src="./pic/QRCode.jpg" />
+                      src="./pic/QRCode.jpg">
                     <i class="header-title--right-buttons-menu--show-elements--fbi fa-brands fa-facebook fa-fade">
                       Facebook</i>
                   </a>
@@ -65,18 +67,26 @@
             </div>
             <!-- AVT, TÊN USER VÀ THANH TÙY CHỈNH-->
             <div class="header__user header-title--right-buttons--elements">
-              <a href="thanh_vien" title="Link to Profile" target="_self" id="header__user--name">USER NAME</a>
-              <img src="pic/user_avatar.jpg" title="USER AVATAR" alt="USER AVATAR" id="header__user--avatar" />
-              <button class="fa-solid fa-bars" id="header__sidebar__button" onclick="set_side_bar()"></button>
+              <a href="thanh_vien.html" title="Link to Profile" target="_self" id="header__user--name">USER NAME</a>
+              <img src="pic/user_avatar.jpg" title="USER AVATAR" alt="USER AVATAR" id="header__user--avatar">
+              <button class="fa-solid fa-bars" id="header__sidebar__button" onclick=set_side_bar()></button>
               <div id="header__hideSidebar">
-                <a href="" class="hideSidebar__option" id="logOut"><i class="fa-solid fa-right-to-bracket"></i><span>Đăng xuất</span></a>
+                <a href="" class="hideSidebar__option" id="logOut"><i
+                    class="fa-solid fa-right-to-bracket"></i><span>Đăng xuất</span></a>
                 <div href="" class="hideSidebar__option" id="utilities">
-                  <div id="utilities__title"><p><i class="fa-solid fa-star"></i><span>Tiện ích</span></p><i style="font-size: 0.7em;" class="fa-solid fa-angle-down"></i></div>
+                  <div id="utilities__title">
+                    <p><i class="fa-solid fa-star"></i><span>Tiện ích</span></p><i style="font-size: 0.7em;"
+                      class="fa-solid fa-angle-down"></i>
+                  </div>
                   <div id="utilities__element">
-                      <a href="" class="hideSidebar__option" id=""><i class="fa-solid fa-right-to-bracket"></i><span>Đăng xuất</span></a>
-                      <a href="" class="hideSidebar__option" id=""><i class="fa-solid fa-right-to-bracket"></i><span>Đăng xuất</span></a>
-                      <a href="" class="hideSidebar__option" id=""><i class="fa-solid fa-right-to-bracket"></i><span>Đăng xuất</span></a>
-                      <a href="" class="hideSidebar__option" id=""><i class="fa-solid fa-right-to-bracket"></i><span>Đăng xuất</span></a>
+                    <a href="" class="hideSidebar__option" id=""><i class="fa-solid fa-bomb"></i><span>Tiện ích
+                        1</span></a>
+                    <a href="" class="hideSidebar__option" id=""><i
+                        class="fa-solid fa-wand-magic-sparkles"></i><span>Tiện ích 2</span></a>
+                    <a href="" class="hideSidebar__option" id=""><i class="fa-solid fa-heart"></i><span>Tiện ích
+                        3</span></a>
+                    <a href="" class="hideSidebar__option" id=""><i class="fa-solid fa-hippo"></i><span>Tiện ích
+                        4</span></a>
                   </div>
                 </div>
               </div>
@@ -89,39 +99,56 @@
         <div class="header-nav__search-block" id="search--block">
           <div class="header-nav__search-block__button" id="search--button">
             <button class="fa-solid fa-magnifying-glass header-nav__search-block__button--icon"
-              onclick="set_search_bar()"></button>
+              onclick=set_search_bar()></button>
           </div>
           <div class="header-nav__search-block__bar" id="search--bar">
-            <input type="text" />
+            <input type="text">
           </div>
         </div>
         <!-- THANH ĐIỀU HƯỚNG -->
         <div class="header-nav__menu">
           <div id="header__clock"><span id="week-number"></span><span id="current-date"></span></div>
-          <script>createDate()</script>
-          <a href="trang_chu" class="header-nav__menu--element navbutton" id="page0">TRANG CHỦ</a>
-          <a href="thanh_vien" class="header-nav__menu--element navbutton" id="page1">THÀNH VIÊN</a>
-          <a href="lop" class="header-nav__menu--element navbutton" id="page2">LỚP</a>
-          <a href="nhom" class="header-nav__menu--element navbutton" id="page3">NHÓM</a>
-          <a href="thu_vien" class="header-nav__menu--element navbutton" id="page4">THƯ VIỆN</a>
-          <a href="gioi_thieu" class="header-nav__menu--element navbutton" id="page5">GIỚI THIỆU</a>
-          <a href="cap_nhat" class="header-nav__menu--element navbutton" id="page6" target="_blank">CẬP NHẬT THÔNG
+          <a href="index.html" class="header-nav__menu--element navbutton" id="page0">TRANG CHỦ</a>
+          <a href="thanh_vien.html" class="header-nav__menu--element navbutton" id="page1">THÀNH VIÊN</a>
+          <a href="lop.html" class="header-nav__menu--element navbutton" id="page2">LỚP</a>
+          <a href="nhom.html" class="header-nav__menu--element navbutton" id="page3">NHÓM</a>
+          <a href="thu_vien.html" class="header-nav__menu--element navbutton" id="page4">THƯ VIỆN</a>
+          <a href="gioi_thieu.html" class="header-nav__menu--element navbutton" id="page5">GIỚI THIỆU</a>
+          <a href="cap_nhat.html" class="header-nav__menu--element navbutton" id="page6" target="_blank">CẬP NHẬT THÔNG
             TIN</a>
-          <a href="thi_dua" class="header-nav__menu--element navbutton" id="page7">THI ĐUA</a>
-          <a href="login" class="header-nav__menu--element navbutton">ĐĂNG NHẬP-TEST</a>
+          <a href="thi_dua.html" class="header-nav__menu--element navbutton" id="page7">THI ĐUA</a>
+          <a href="elearning.html" class="header-nav__menu--element navbutton" id="page8">E-LEARNING</a>
+          <a href="login.html" class="header-nav__menu--element navbutton">ĐĂNG NHẬP-TEST</a>
           <a target="_blank"
             href="https://stealth-leo-c2e.notion.site/M-T-S-N-PH-M-D-N-SCHOOL-WEB-532aa687a4ca4a7fb94f0f37424c9085?pvs=4"
             class="header-nav__menu--element navbutton">LINK MÔ TẢ SẢN PHẨM</a>
+          <a href="login.html" class="header-nav__menu--element navbutton" style="color: gray">TEST ELEMENT</a>
+          <a href="login.html" class="header-nav__menu--element navbutton" style="color: gray">TEST ELEMENT</a>
+          <a href="login.html" class="header-nav__menu--element navbutton" style="color: gray">TEST ELEMENT</a>
+          <a href="login.html" class="header-nav__menu--element navbutton" style="color: gray">TEST ELEMENT</a>
+          <a href="login.html" class="header-nav__menu--element navbutton" style="color: gray">TEST ELEMENT</a>
+          <a href="login.html" class="header-nav__menu--element navbutton" style="color: gray">TEST ELEMENT</a>
+          <a href="login.html" class="header-nav__menu--element navbutton" style="color: gray">TEST ELEMENT</a>
+          <a href="login.html" class="header-nav__menu--element navbutton" style="color: gray">TEST ELEMENT</a>
+          <a href="login.html" class="header-nav__menu--element navbutton" style="color: gray">TEST ELEMENT</a>
+          <a href="login.html" class="header-nav__menu--element navbutton" style="color: gray">TEST ELEMENT</a>
+          <a href="login.html" class="header-nav__menu--element navbutton" style="color: gray">TEST ELEMENT</a>
+          <a href="login.html" class="header-nav__menu--element navbutton" style="color: gray">TEST ELEMENT</a>
+          <a href="login.html" class="header-nav__menu--element navbutton" style="color: gray">TEST ELEMENT</a>
+          <a href="login.html" class="header-nav__menu--element navbutton" style="color: gray">TEST ELEMENT</a>
+          <a href="login.html" class="header-nav__menu--element navbutton" style="color: gray">TEST ELEMENT</a>
         </div>
       </div>
       <div class="paddingRight"></div>
     </div>
-    <h1 id="webNote" ;
-      style="position: fixed; left: 0; bottom: 0; background-color:rgb(37, 37, 37); z-index: 1; color: white; padding: 0.25% 1%; border-radius: 0 0.5vw 0 0;font-size: calc(var(--myfontsize)/3)">
-      Đây chỉ là mô hình, dữ liệu chỉ là mô phỏng. <a style="color:yellow;font-size:0.7em" target="_blank"
-        href="https://stealth-leo-c2e.notion.site/M-T-S-N-PH-M-D-N-SCHOOL-WEB-532aa687a4ca4a7fb94f0f37424c9085?pvs=4"><i>link
-          to workspace here</i></a></h1>
   </div>
+  <div id="chatWithAi" onclick="chatWithAi()">
+    <img src=pic/aiPic.jpg id="chatBotPicture">
+  </div>
+  <h1 id="webNote">Đây chỉ là mô hình, dữ liệu chỉ là mô phỏng. <a target="_blank"
+      href="https://stealth-leo-c2e.notion.site/M-T-S-N-PH-M-D-N-SCHOOL-WEB-532aa687a4ca4a7fb94f0f37424c9085?pvs=4"><i>link
+        to workspace here</i></a></h1>
+
 
   {{{body}}}
 
