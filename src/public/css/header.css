@@ -562,7 +562,7 @@
 
     display: flex;
     align-items: center;
-    font-size: 1em;
+    font-size: 0.85em;
 }
 
 .header-nav__menu--element {
