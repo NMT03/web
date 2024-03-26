@@ -113,6 +113,7 @@
 
     to {
         width: 0;
+        height: 0;
         opacity: 0;
         font-size: 0;
 
@@ -123,6 +124,7 @@
 @keyframes sideBarShow {
     from {
         width: 0;
+        height: 0;
         opacity: 0;
         font-size: 0;
 
@@ -186,7 +188,7 @@
 #bc6__body__sidebar__body ul {
     position: relative;
     padding: 0;
-    height: 100vh;
+    height: 90vh;
     margin-left: 4%;
     padding-bottom: 100%;
 
@@ -545,7 +547,7 @@
 }
 
 .interact__form select option{
-    background-color: rgb(207, 207, 207);
+    background-color: rgb(47, 47, 47);
 }
 
 .interact__form .form-row{
@@ -599,6 +601,18 @@
     padding: 0.5% 0;
 }
 
+#addForm h2 i{
+    color: rgb(112, 255, 109);
+}
+
+#changeForm h2 i{
+    color: rgb(255, 195, 83);
+}
+
+#removeForm h2 i{
+    color: rgb(255, 103, 103);
+}
+
 .interact__form form {
     display: none;
     flex-direction: column;
@@ -645,13 +659,24 @@
     padding: 0.5% 2%;
     border: 0.05vw solid #ccc;
     border-radius: 0.25vw;
-    background-color: #76ff27;
     color: #ffffff;
     cursor: pointer;
 
     font-size: 0.6em;
 
     transition: background-color 0.2s;
+}
+
+.addFormType button{
+    background-color: #76ff27;
+}
+
+.changeFormType button{
+    background-color: orange;
+}
+
+.removeFormType button{
+    background-color: rgb(255, 105, 105);
 }
 
 .interact__form button:hover {
