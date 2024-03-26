@@ -839,7 +839,8 @@
     position: fixed;
     right: 0;
     bottom: 6vh;
-    width: 6vw;
+    width: 5vw;
+    margin-right: 2%;
 
     z-index: 1;
 
